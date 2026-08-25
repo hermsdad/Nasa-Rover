@@ -1,6 +1,6 @@
 # Rover Print Files
 
-A visual catalog of 3D print parts for the Rover Perseverance model, exported from Autodesk Fusion.
+A visual catalog of 3D print parts for the Rover Perseverance model.
 
 ## Pages
 
