@@ -3,635 +3,646 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rover Parts Catalog</title>
+  <title>Rover Parts Catalog &mdash; Wheel &amp; Suspension</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-           background: #0d1117; color: #e6edf3; min-height: 100vh; }
-    header { background: #161b22; border-bottom: 1px solid #30363d;
-             padding: 24px 40px; display: flex; align-items: center; gap: 16px; }
-    header h1 { font-size: 1.6rem; font-weight: 700; color: #f0f6fc; }
-    header p { color: #8b949e; font-size: 0.9rem; margin-top: 4px; }
-    .badge { background: #238636; color: #fff; font-size: 0.75rem;
-             padding: 2px 10px; border-radius: 12px; font-weight: 600; }
-    .badge.buy { background: #9a3412; }
-    nav { background: #161b22; border-bottom: 1px solid #30363d;
-          padding: 0 40px; display: flex; gap: 0; }
-    nav a { display: inline-block; padding: 12px 20px; color: #8b949e;
-            text-decoration: none; font-size: 0.9rem; border-bottom: 2px solid transparent;
-            transition: color 0.2s; }
-    nav a:hover, nav a.active { color: #f0f6fc; border-bottom-color: #388bfd; }
-    main { padding: 40px; max-width: 1600px; margin: 0 auto; }
-    .section-header { display: flex; align-items: center; gap: 12px;
-                      margin-bottom: 24px; margin-top: 40px; }
-    .section-header:first-child { margin-top: 0; }
-    .section-header h2 { font-size: 1.2rem; font-weight: 600; color: #f0f6fc; }
-    .section-header p { color: #8b949e; font-size: 0.85rem; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 16px; }
-    .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px;
-            overflow: hidden; transition: border-color 0.2s, transform 0.2s; cursor: default; }
-    .card:hover { border-color: #388bfd; transform: translateY(-2px); }
-    .card.buy-card:hover { border-color: #f97316; }
-    .card img { width: 100%; aspect-ratio: 1; object-fit: contain;
-                background: #0d1117; padding: 8px; display: block; }
-    .card .label { padding: 10px 12px; font-size: 0.78rem; color: #8b949e;
-                   border-top: 1px solid #30363d; line-height: 1.4;
-                   word-break: break-word; }
-    .card .label strong { display: block; color: #e6edf3; font-size: 0.82rem;
-                          margin-bottom: 2px; }
-    footer { text-align: center; padding: 40px; color: #484f58; font-size: 0.8rem;
-             border-top: 1px solid #21262d; margin-top: 60px; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+         background:#0d1117;color:#e6edf3;min-height:100vh}
+    a{color:#388bfd;text-decoration:none}a:hover{text-decoration:underline}
+    header{background:#161b22;border-bottom:1px solid #30363d;padding:24px 40px}
+    header h1{font-size:1.6rem;font-weight:700;color:#f0f6fc}
+    header p{color:#8b949e;font-size:0.88rem;margin-top:5px}
+    nav{background:#161b22;border-bottom:1px solid #30363d;padding:0 40px;display:flex;gap:0}
+    nav a{display:inline-block;padding:12px 20px;color:#8b949e;font-size:0.88rem;
+          border-bottom:2px solid transparent;transition:color .2s}
+    nav a:hover,nav a.active{color:#f0f6fc;border-bottom-color:#388bfd;text-decoration:none}
+    main{padding:40px;max-width:1600px;margin:0 auto}
+    .notice{background:#161b22;border:1px solid #f97316;border-radius:8px;
+            padding:16px 20px;margin-bottom:32px;font-size:0.85rem;color:#fdba74;line-height:1.6}
+    .notice strong{color:#fb923c;display:block;margin-bottom:4px;font-size:0.9rem}
+    .legend-key{background:#161b22;border:1px solid #30363d;border-radius:8px;
+                padding:16px 20px;margin-bottom:32px}
+    .legend-key h3{font-size:0.85rem;color:#8b949e;font-weight:600;
+                   text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px}
+    .legend-grid{display:flex;flex-wrap:wrap;gap:8px 24px}
+    .legend-item{font-size:0.82rem;color:#8b949e;display:flex;align-items:center;gap:6px}
+    .legend-item code{background:#0d1117;border:1px solid #30363d;border-radius:4px;
+                      padding:1px 6px;font-size:0.78rem;color:#e6edf3;font-weight:700}
+    .sh{display:flex;align-items:baseline;gap:12px;margin:40px 0 20px}
+    .sh:first-of-type{margin-top:0}
+    .sh h2{font-size:1.1rem;font-weight:600;color:#f0f6fc}
+    .sh p{color:#8b949e;font-size:0.82rem}
+    .badge{font-size:0.72rem;padding:2px 10px;border-radius:12px;font-weight:600;white-space:nowrap}
+    .badge.print{background:#238636;color:#fff}
+    .badge.buy{background:#9a3412;color:#fff}
+    .badge.spec{background:#1d4ed8;color:#fff}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+    .card{background:#161b22;border:1px solid #30363d;border-radius:8px;
+          overflow:hidden;transition:border-color .2s,transform .2s}
+    .card:hover{border-color:#388bfd;transform:translateY(-2px)}
+    .card.buy-card:hover{border-color:#f97316}
+    .card.spec-card:hover{border-color:#60a5fa}
+    .card img{width:100%;aspect-ratio:1/1;object-fit:contain;
+              background:#0d1117;padding:8px;display:block}
+    .card .no-img{width:100%;aspect-ratio:1/1;background:#0d1117;
+                  display:flex;align-items:center;justify-content:center;
+                  color:#484f58;font-size:0.75rem}
+    .card .lbl{padding:9px 11px;font-size:0.76rem;color:#8b949e;
+               border-top:1px solid #30363d;line-height:1.4;word-break:break-word}
+    .card .lbl strong{display:block;color:#e6edf3;font-size:0.8rem;margin-bottom:3px}
+    .card .lbl .note{font-size:0.72rem;color:#6e7681;margin-top:4px;line-height:1.4}
+    .spec-table{width:100%;border-collapse:collapse;margin-bottom:32px;font-size:0.84rem}
+    .spec-table th{background:#161b22;color:#8b949e;font-weight:600;
+                   text-align:left;padding:10px 14px;border-bottom:2px solid #30363d}
+    .spec-table td{padding:10px 14px;border-bottom:1px solid #21262d;color:#e6edf3;vertical-align:top}
+    .spec-table tr:hover td{background:#161b22}
+    .spec-table td.qty{color:#f0f6fc;font-weight:700;white-space:nowrap}
+    .spec-table td.rec{font-size:0.78rem;color:#8b949e}
+    footer{text-align:center;padding:40px;color:#484f58;font-size:0.78rem;
+           border-top:1px solid #21262d;margin-top:60px}
   </style>
 </head>
 <body>
 <header>
-  <div>
-    <h1>&#x1F916; Rover Parts Catalog</h1>
-    <p>Wheel &amp; Suspension System &mdash; printable parts and hardware</p>
-  </div>
+  <h1>&#x1F916; Rover Parts Catalog</h1>
+  <p>Wheel &amp; Suspension System &mdash; printable parts and hardware</p>
 </header>
 <nav>
   <a href="index.html" class="active">Wheel &amp; Suspension (WS)</a>
-  <a href="other/diagram.html">Parts Diagram</a>
 </nav>
 <main>
-  <a href="other/diagram.html" style="text-decoration:none;display:block;margin-bottom:36px;">
-    <div style="position:relative;border-radius:10px;overflow:hidden;
-                border:1px solid #30363d;background:#161b22;">
-      <img src="other/exploded_view.png" alt="Rover parts diagram"
-           style="width:100%;display:block;opacity:0.85;">
-      <div style="position:absolute;inset:0;display:flex;flex-direction:column;
-                  align-items:center;justify-content:center;
-                  background:rgba(13,17,23,0.45);">
-        <div style="font-size:1.5rem;font-weight:700;color:#f0f6fc;
-                    text-shadow:0 2px 8px rgba(0,0,0,0.8);">&#x1F4CD; Interactive Parts Diagram</div>
-        <div style="font-size:0.9rem;color:#8b949e;margin-top:6px;
-                    text-shadow:0 1px 4px rgba(0,0,0,0.8);">Hover any dot to identify a part &mdash; click to explore</div>
-      </div>
-    </div>
-  </a>
-  <div class="section-header">
-    <div>
-      <h2>&#x1F5A8; Printable Parts <span class="badge">131 parts</span></h2>
-      <p>Print these parts on your FDM or resin printer</p>
-    </div>
-  </div>
-  <div class="grid">
-        <div class="card">
-          <img src="ws/Bottom_Bracket_Body_Linkage_1.png" alt="Bottom Bracket Body Linkage" loading="lazy">
-          <div class="label"><strong>Bottom Bracket Body Linkage</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/FL_Axel_Thing_maybe_merge_1.png" alt="FL Axel Thing maybe merge" loading="lazy">
-          <div class="label"><strong>FL Axel Thing maybe merge</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LB_And_Middle_Mounting_Brack_Bolt_Part_B_1.png" alt="LB And Middle Mounting Brack Bolt Part B" loading="lazy">
-          <div class="label"><strong>LB And Middle Mounting Brack Bolt Part B</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LB_Axel_1.png" alt="LB Axel" loading="lazy">
-          <div class="label"><strong>LB Axel</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LB_Rocker_Arm_1.png" alt="LB Rocker Arm" loading="lazy">
-          <div class="label"><strong>LB Rocker Arm</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LB_Rocker_Arm_to_Back_and_Middle_Mounting_Bracket_1.png" alt="LB Rocker Arm to Back and Middle Mounting Bracket" loading="lazy">
-          <div class="label"><strong>LB Rocker Arm to Back and Middle Mounting Bracket</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LB_Servo_Bottom_Cover_1.png" alt="LB Servo Bottom Cover" loading="lazy">
-          <div class="label"><strong>LB Servo Bottom Cover</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LB_Servo_Gear_1.png" alt="LB Servo Gear" loading="lazy">
-          <div class="label"><strong>LB Servo Gear</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LB_Servo_MG996R_1.png" alt="LB Servo MG996R" loading="lazy">
-          <div class="label"><strong>LB Servo MG996R</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LB_Servo_Mount_Cover_likely_1.png" alt="LB Servo Mount Cover likely" loading="lazy">
-          <div class="label"><strong>LB Servo Mount Cover likely</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LB_Servo_Wheel_Assembly_Mount_1.png" alt="LB Servo Wheel Assembly Mount" loading="lazy">
-          <div class="label"><strong>LB Servo Wheel Assembly Mount</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LB_Servo_to_Wheel_Mount_1.png" alt="LB Servo to Wheel Mount" loading="lazy">
-          <div class="label"><strong>LB Servo to Wheel Mount</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LB_Spacer_Washer_Servo_Mounting_Arm__1.png" alt="LB Spacer Washer Servo Mounting Arm" loading="lazy">
-          <div class="label"><strong>LB Spacer Washer Servo Mounting Arm</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LB_Suspension_Bolt_Part_A_1.png" alt="LB Suspension Bolt Part A" loading="lazy">
-          <div class="label"><strong>LB Suspension Bolt Part A</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LB_Suspension_Bolt_Part_B_1.png" alt="LB Suspension Bolt Part B" loading="lazy">
-          <div class="label"><strong>LB Suspension Bolt Part B</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LB_Suspension_Bolt_Part_C_1.png" alt="LB Suspension Bolt Part C" loading="lazy">
-          <div class="label"><strong>LB Suspension Bolt Part C</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LB_Wheel_1.png" alt="LB Wheel" loading="lazy">
-          <div class="label"><strong>LB Wheel</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LB_Wheel_Mount_1.png" alt="LB Wheel Mount" loading="lazy">
-          <div class="label"><strong>LB Wheel Mount</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LB_Wheel_Rotor_1.png" alt="LB Wheel Rotor" loading="lazy">
-          <div class="label"><strong>LB Wheel Rotor</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LB_and_Middle_Bracket_Bolt_Part_A_1.png" alt="LB and Middle Bracket Bolt Part A" loading="lazy">
-          <div class="label"><strong>LB and Middle Bracket Bolt Part A</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LB_and_Middle_Mounting_Block_Part_A_1.png" alt="LB and Middle Mounting Block Part A" loading="lazy">
-          <div class="label"><strong>LB and Middle Mounting Block Part A</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LB_and_Middle_Mounting_Block_Part_B_1.png" alt="LB and Middle Mounting Block Part B" loading="lazy">
-          <div class="label"><strong>LB and Middle Mounting Block Part B</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LB_to_Middle_Rocker_Arm_Tube_for_Suspension_Bolt_Part_C_1.png" alt="LB to Middle Rocker Arm Tube for Suspension Bolt Part C" loading="lazy">
-          <div class="label"><strong>LB to Middle Rocker Arm Tube for Suspension Bolt Part C</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LF_Axel_1.png" alt="LF Axel" loading="lazy">
-          <div class="label"><strong>LF Axel</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LF_Connector_Screw_Servo_Mount_to_Suspension_Bolt_1.png" alt="LF Connector Screw Servo Mount to Suspension Bolt" loading="lazy">
-          <div class="label"><strong>LF Connector Screw Servo Mount to Suspension Bolt</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LF_DC-motor_v10_1.png" alt="LF DC-motor v10" loading="lazy">
-          <div class="label"><strong>LF DC-motor v10</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LF_Rocker_Arm_1.png" alt="LF Rocker Arm" loading="lazy">
-          <div class="label"><strong>LF Rocker Arm</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LF_Servo_Gear_1.png" alt="LF Servo Gear" loading="lazy">
-          <div class="label"><strong>LF Servo Gear</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LF_Servo_MG996R_1.png" alt="LF Servo MG996R" loading="lazy">
-          <div class="label"><strong>LF Servo MG996R</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LF_Servo_Motor_Mount_Washer_1.png" alt="LF Servo Motor Mount Washer" loading="lazy">
-          <div class="label"><strong>LF Servo Motor Mount Washer</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LF_Servo_Mount_Cover_likely_1.png" alt="LF Servo Mount Cover likely" loading="lazy">
-          <div class="label"><strong>LF Servo Mount Cover likely</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LF_Servo_Wheel_Assembly_Mount_1.png" alt="LF Servo Wheel Assembly Mount" loading="lazy">
-          <div class="label"><strong>LF Servo Wheel Assembly Mount</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LF_Servo_to_Wheel_Mount_1.png" alt="LF Servo to Wheel Mount" loading="lazy">
-          <div class="label"><strong>LF Servo to Wheel Mount</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LF_Suspension_Bold_Part_B_1.png" alt="LF Suspension Bold Part B" loading="lazy">
-          <div class="label"><strong>LF Suspension Bold Part B</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LF_Suspension_Bolt_Part_A_1.png" alt="LF Suspension Bolt Part A" loading="lazy">
-          <div class="label"><strong>LF Suspension Bolt Part A</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LF_Suspension_Bolt_Part_C_1.png" alt="LF Suspension Bolt Part C" loading="lazy">
-          <div class="label"><strong>LF Suspension Bolt Part C</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LF_WHeel_Mount_1.png" alt="LF WHeel Mount" loading="lazy">
-          <div class="label"><strong>LF WHeel Mount</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LF_Wheel_1.png" alt="LF Wheel" loading="lazy">
-          <div class="label"><strong>LF Wheel</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LF_Wheel_Rotor_1.png" alt="LF Wheel Rotor" loading="lazy">
-          <div class="label"><strong>LF Wheel Rotor</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LM_Axel_Cover_1.png" alt="LM Axel Cover" loading="lazy">
-          <div class="label"><strong>LM Axel Cover</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LM_Connector_Rod_Bolt_Part_C_1.png" alt="LM Connector Rod Bolt Part C" loading="lazy">
-          <div class="label"><strong>LM Connector Rod Bolt Part C</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LM_Linkage_Mount_to_Body_Mount_and_Rocker_Arm_Connector_1.png" alt="LM Linkage Mount to Body Mount and Rocker Arm Connector" loading="lazy">
-          <div class="label"><strong>LM Linkage Mount to Body Mount and Rocker Arm Connector</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LM_Main_Suspension_Mounting_Block_to_Body__1.png" alt="LM Main Suspension Mounting Block to Body" loading="lazy">
-          <div class="label"><strong>LM Main Suspension Mounting Block to Body</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LM_Mounting_Bracket_Linkage_Arm_and_Rocker_Arm_Connector_1.png" alt="LM Mounting Bracket Linkage Arm and Rocker Arm Connector" loading="lazy">
-          <div class="label"><strong>LM Mounting Bracket Linkage Arm and Rocker Arm Connector</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LM_Mounting_Bracket_for_Body_Body_Mount_and_Linkage_Arm_1.png" alt="LM Mounting Bracket for Body Body Mount and Linkage Arm" loading="lazy">
-          <div class="label"><strong>LM Mounting Bracket for Body Body Mount and Linkage Arm</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LM_Rocker_Arm_1.png" alt="LM Rocker Arm" loading="lazy">
-          <div class="label"><strong>LM Rocker Arm</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LM_Suspension_Bold_Part_B_1.png" alt="LM Suspension Bold Part B" loading="lazy">
-          <div class="label"><strong>LM Suspension Bold Part B</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LM_Suspension_Bolt_Part_A_1.png" alt="LM Suspension Bolt Part A" loading="lazy">
-          <div class="label"><strong>LM Suspension Bolt Part A</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LM_Wheel_1.png" alt="LM Wheel" loading="lazy">
-          <div class="label"><strong>LM Wheel</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LM_Wheel_Assembly_Mount_1.png" alt="LM Wheel Assembly Mount" loading="lazy">
-          <div class="label"><strong>LM Wheel Assembly Mount</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LM_Wheel_Axel_1.png" alt="LM Wheel Axel" loading="lazy">
-          <div class="label"><strong>LM Wheel Axel</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LM_Wheel_Mount_1.png" alt="LM Wheel Mount" loading="lazy">
-          <div class="label"><strong>LM Wheel Mount</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LM_Wheel_Rotor_1.png" alt="LM Wheel Rotor" loading="lazy">
-          <div class="label"><strong>LM Wheel Rotor</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LR_Axel_Thing_Maybe_merge_1.png" alt="LR Axel Thing Maybe merge" loading="lazy">
-          <div class="label"><strong>LR Axel Thing Maybe merge</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/LR_Bracket_Threaded_Rod_for_Rocker_Arm_to_Connector_1.png" alt="LR Bracket Threaded Rod for Rocker Arm to Connector" loading="lazy">
-          <div class="label"><strong>LR Bracket Threaded Rod for Rocker Arm to Connector</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/L_Linkage_Arm_1.png" alt="L Linkage Arm" loading="lazy">
-          <div class="label"><strong>L Linkage Arm</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Left_Main_Suspension_Mounting_Block_1.png" alt="Left Main Suspension Mounting Block" loading="lazy">
-          <div class="label"><strong>Left Main Suspension Mounting Block</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Left_WS_Body_Mount_1.png" alt="Left WS Body Mount" loading="lazy">
-          <div class="label"><strong>Left WS Body Mount</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Main_Rover_Body_panel__1.png" alt="Main Rover Body panel" loading="lazy">
-          <div class="label"><strong>Main Rover Body panel</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Middle_Suspension_Bold_Part_B_1.png" alt="Middle Suspension Bold Part B" loading="lazy">
-          <div class="label"><strong>Middle Suspension Bold Part B</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RB_Axel_Mount_1.png" alt="RB Axel Mount" loading="lazy">
-          <div class="label"><strong>RB Axel Mount</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RB_Rocker_Arm_1.png" alt="RB Rocker Arm" loading="lazy">
-          <div class="label"><strong>RB Rocker Arm</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RB_Rocker_Arm_Threaded_ConnectorPart_392__Part_392__Part_392__Part_392__1__1.png" alt="RB Rocker Arm Threaded ConnectorPart 392  Part 392  Part 392  Part 392  1" loading="lazy">
-          <div class="label"><strong>RB Rocker Arm Threaded ConnectorPart 392  Part 392  Part 392  Part 392  1</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RB_Rocker_Arm_to_Back_and_Middle_Mounting_Bracket_1.png" alt="RB Rocker Arm to Back and Middle Mounting Bracket" loading="lazy">
-          <div class="label"><strong>RB Rocker Arm to Back and Middle Mounting Bracket</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RB_Servo_Gear_1.png" alt="RB Servo Gear" loading="lazy">
-          <div class="label"><strong>RB Servo Gear</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RB_Servo_MG996R_1.png" alt="RB Servo MG996R" loading="lazy">
-          <div class="label"><strong>RB Servo MG996R</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RB_Servo_Wheel_Assembly_Mount_1.png" alt="RB Servo Wheel Assembly Mount" loading="lazy">
-          <div class="label"><strong>RB Servo Wheel Assembly Mount</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RB_Servo_to_Wheel_Mount_1.png" alt="RB Servo to Wheel Mount" loading="lazy">
-          <div class="label"><strong>RB Servo to Wheel Mount</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RB_Suspension_Bold_Part_B_1.png" alt="RB Suspension Bold Part B" loading="lazy">
-          <div class="label"><strong>RB Suspension Bold Part B</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RB_Suspension_Bolt_Part_A_1.png" alt="RB Suspension Bolt Part A" loading="lazy">
-          <div class="label"><strong>RB Suspension Bolt Part A</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RB_Suspension_Bolt_Part_B_1.png" alt="RB Suspension Bolt Part B" loading="lazy">
-          <div class="label"><strong>RB Suspension Bolt Part B</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RB_Suspension_Bolt_Part_C_1.png" alt="RB Suspension Bolt Part C" loading="lazy">
-          <div class="label"><strong>RB Suspension Bolt Part C</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RB_Suspension_Rod_Part_A_1.png" alt="RB Suspension Rod Part A" loading="lazy">
-          <div class="label"><strong>RB Suspension Rod Part A</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RB_Wheel_1.png" alt="RB Wheel" loading="lazy">
-          <div class="label"><strong>RB Wheel</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RB_Wheel_Mount_1.png" alt="RB Wheel Mount" loading="lazy">
-          <div class="label"><strong>RB Wheel Mount</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RB_Wheel_Rotor_1.png" alt="RB Wheel Rotor" loading="lazy">
-          <div class="label"><strong>RB Wheel Rotor</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RB_Wheel_Washer_at_Axel_1.png" alt="RB Wheel Washer at Axel" loading="lazy">
-          <div class="label"><strong>RB Wheel Washer at Axel</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RB_and_Middle_Connector_Part_A_threaded_rod_connector_1.png" alt="RB and Middle Connector Part A threaded rod connector" loading="lazy">
-          <div class="label"><strong>RB and Middle Connector Part A threaded rod connector</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RB_and_Middle_Mounting_Block_Part_A_1.png" alt="RB and Middle Mounting Block Part A" loading="lazy">
-          <div class="label"><strong>RB and Middle Mounting Block Part A</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RB_and_Middle_Mounting_Block_Part_B_1.png" alt="RB and Middle Mounting Block Part B" loading="lazy">
-          <div class="label"><strong>RB and Middle Mounting Block Part B</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RB_weird_Axel_thing__maybe_merge_into_axel_1.png" alt="RB weird Axel thing  maybe merge into axel" loading="lazy">
-          <div class="label"><strong>RB weird Axel thing  maybe merge into axel</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RF_Axel_1.png" alt="RF Axel" loading="lazy">
-          <div class="label"><strong>RF Axel</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RF_DC-motor_v10_1.png" alt="RF DC-motor v10" loading="lazy">
-          <div class="label"><strong>RF DC-motor v10</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RF_Rocker_Arm__1.png" alt="RF Rocker Arm" loading="lazy">
-          <div class="label"><strong>RF Rocker Arm</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RF_Screw_for_Rocker_Arm_to_Wheel_Assembly_1.png" alt="RF Screw for Rocker Arm to Wheel Assembly" loading="lazy">
-          <div class="label"><strong>RF Screw for Rocker Arm to Wheel Assembly</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RF_Servo_Gear_1.png" alt="RF Servo Gear" loading="lazy">
-          <div class="label"><strong>RF Servo Gear</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RF_Servo_MG996R_1.png" alt="RF Servo MG996R" loading="lazy">
-          <div class="label"><strong>RF Servo MG996R</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RF_Servo_Mount_Cover_1.png" alt="RF Servo Mount Cover" loading="lazy">
-          <div class="label"><strong>RF Servo Mount Cover</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RF_Servo_Wheel_Mount_Assembly_1.png" alt="RF Servo Wheel Mount Assembly" loading="lazy">
-          <div class="label"><strong>RF Servo Wheel Mount Assembly</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RF_Servo_to_Wheel_Mount_Connector_1.png" alt="RF Servo to Wheel Mount Connector" loading="lazy">
-          <div class="label"><strong>RF Servo to Wheel Mount Connector</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RF_Suspension_Bolt_Part_C_1.png" alt="RF Suspension Bolt Part C" loading="lazy">
-          <div class="label"><strong>RF Suspension Bolt Part C</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RF_Suspension_Bolt_Threaded_Part_C_1.png" alt="RF Suspension Bolt Threaded Part C" loading="lazy">
-          <div class="label"><strong>RF Suspension Bolt Threaded Part C</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RF_Suspension_Mounting_Bolt_Part_A_1.png" alt="RF Suspension Mounting Bolt Part A" loading="lazy">
-          <div class="label"><strong>RF Suspension Mounting Bolt Part A</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RF_Weird_Axel_thing_Maybe_merge_1.png" alt="RF Weird Axel thing Maybe merge" loading="lazy">
-          <div class="label"><strong>RF Weird Axel thing Maybe merge</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RF_Wheel_1.png" alt="RF Wheel" loading="lazy">
-          <div class="label"><strong>RF Wheel</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RF_Wheel_Rotor_1.png" alt="RF Wheel Rotor" loading="lazy">
-          <div class="label"><strong>RF Wheel Rotor</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RF_Wheel_Rotor_Washer_Spacer_1.png" alt="RF Wheel Rotor Washer Spacer" loading="lazy">
-          <div class="label"><strong>RF Wheel Rotor Washer Spacer</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RL_Wheel_Mount_Linkage_Arm_1.png" alt="RL Wheel Mount Linkage Arm" loading="lazy">
-          <div class="label"><strong>RL Wheel Mount Linkage Arm</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RM_Axel_1.png" alt="RM Axel" loading="lazy">
-          <div class="label"><strong>RM Axel</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RM_Axel_Cover_Thing_1.png" alt="RM Axel Cover Thing" loading="lazy">
-          <div class="label"><strong>RM Axel Cover Thing</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RM_Axel_Cover_maybe_1.png" alt="RM Axel Cover maybe" loading="lazy">
-          <div class="label"><strong>RM Axel Cover maybe</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RM_Linkage_Mount_to_Body_Mount_and_Rocker_Arm_connector_1.png" alt="RM Linkage Mount to Body Mount and Rocker Arm connector" loading="lazy">
-          <div class="label"><strong>RM Linkage Mount to Body Mount and Rocker Arm connector</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RM_Mounting_Bracket_Body_to_WS_suspension_system_1.png" alt="RM Mounting Bracket Body to WS suspension system" loading="lazy">
-          <div class="label"><strong>RM Mounting Bracket Body to WS suspension system</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RM_Mounting_Bracket_Linkage_Arm_and_Body_Connector_1.png" alt="RM Mounting Bracket Linkage Arm and Body Connector" loading="lazy">
-          <div class="label"><strong>RM Mounting Bracket Linkage Arm and Body Connector</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RM_Right_Middle_Wheel_Rotor_1.png" alt="RM Right Middle Wheel Rotor" loading="lazy">
-          <div class="label"><strong>RM Right Middle Wheel Rotor</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RM_Rocker_Arm_to_Middle_and_Rear_Mounting_Bracket_1.png" alt="RM Rocker Arm to Middle and Rear Mounting Bracket" loading="lazy">
-          <div class="label"><strong>RM Rocker Arm to Middle and Rear Mounting Bracket</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RM_Suspension_Bolt_Part_A_1.png" alt="RM Suspension Bolt Part A" loading="lazy">
-          <div class="label"><strong>RM Suspension Bolt Part A</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RM_Suspension_Bolt_to_Middle_and_Back_Mounting_Block__1.png" alt="RM Suspension Bolt to Middle and Back Mounting Block" loading="lazy">
-          <div class="label"><strong>RM Suspension Bolt to Middle and Back Mounting Block</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/RM_Wheel_1.png" alt="RM Wheel" loading="lazy">
-          <div class="label"><strong>RM Wheel</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/R_Linkage_arm_1.png" alt="R Linkage arm" loading="lazy">
-          <div class="label"><strong>R Linkage arm</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Right_Middle_Suspension_Bolt_Part_C_1.png" alt="Right Middle Suspension Bolt Part C" loading="lazy">
-          <div class="label"><strong>Right Middle Suspension Bolt Part C</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Right_WS_body_mount_1.png" alt="Right WS body mount" loading="lazy">
-          <div class="label"><strong>Right WS body mount</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Servo_Bolt_1.png" alt="Servo Bolt" loading="lazy">
-          <div class="label"><strong>Servo Bolt</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Servo_Bolt__10__1.png" alt="Servo Bolt  10" loading="lazy">
-          <div class="label"><strong>Servo Bolt  10</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Servo_Bolt__11__1.png" alt="Servo Bolt  11" loading="lazy">
-          <div class="label"><strong>Servo Bolt  11</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Servo_Bolt__12__1.png" alt="Servo Bolt  12" loading="lazy">
-          <div class="label"><strong>Servo Bolt  12</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Servo_Bolt__13__1.png" alt="Servo Bolt  13" loading="lazy">
-          <div class="label"><strong>Servo Bolt  13</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Servo_Bolt__14__1.png" alt="Servo Bolt  14" loading="lazy">
-          <div class="label"><strong>Servo Bolt  14</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Servo_Bolt__15__1.png" alt="Servo Bolt  15" loading="lazy">
-          <div class="label"><strong>Servo Bolt  15</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Servo_Bolt__1__1.png" alt="Servo Bolt  1" loading="lazy">
-          <div class="label"><strong>Servo Bolt  1</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Servo_Bolt__2__1.png" alt="Servo Bolt  2" loading="lazy">
-          <div class="label"><strong>Servo Bolt  2</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Servo_Bolt__3__1.png" alt="Servo Bolt  3" loading="lazy">
-          <div class="label"><strong>Servo Bolt  3</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Servo_Bolt__4__1.png" alt="Servo Bolt  4" loading="lazy">
-          <div class="label"><strong>Servo Bolt  4</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Servo_Bolt__5__1.png" alt="Servo Bolt  5" loading="lazy">
-          <div class="label"><strong>Servo Bolt  5</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Servo_Bolt__6__1.png" alt="Servo Bolt  6" loading="lazy">
-          <div class="label"><strong>Servo Bolt  6</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Servo_Bolt__7__1.png" alt="Servo Bolt  7" loading="lazy">
-          <div class="label"><strong>Servo Bolt  7</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Servo_Bolt__8__1.png" alt="Servo Bolt  8" loading="lazy">
-          <div class="label"><strong>Servo Bolt  8</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Servo_Bolt__9__1.png" alt="Servo Bolt  9" loading="lazy">
-          <div class="label"><strong>Servo Bolt  9</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Top_Bracket_Body_Linkage_1.png" alt="Top Bracket Body Linkage" loading="lazy">
-          <div class="label"><strong>Top Bracket Body Linkage</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Washer_Likely_Servo_to_Wheel_Mount_1.png" alt="Washer Likely Servo to Wheel Mount" loading="lazy">
-          <div class="label"><strong>Washer Likely Servo to Wheel Mount</strong>3D Print</div>
-        </div>
-        <div class="card">
-          <img src="ws/Washer_Likely_Wheel_Mount_under_Servo_1.png" alt="Washer Likely Wheel Mount under Servo" loading="lazy">
-          <div class="label"><strong>Washer Likely Wheel Mount under Servo</strong>3D Print</div>
-        </div>
+
+  <div class="notice">
+    <strong>&#x26A0;&#xFE0F; Disclaimer</strong>
+    Some parts are very likely duplicates &mdash; for example certain washers and rocker arms may be
+    identical across left/right/front/back positions. Because these parts have not yet been printed and
+    verified, each is listed separately. This list will be updated once physical prints are confirmed.
   </div>
 
-  <div class="section-header">
-    <div>
-      <h2>&#x1F6D2; Buy These Parts <span class="badge buy">4 parts</span></h2>
-      <p>These are off-the-shelf hardware items &mdash; bearings and nuts you will need to purchase</p>
+  <div class="legend-key">
+    <h3>Naming Convention</h3>
+    <div class="legend-grid">
+      <div class="legend-item"><code>L</code> Left</div>
+      <div class="legend-item"><code>R</code> Right</div>
+      <div class="legend-item"><code>F</code> Front</div>
+      <div class="legend-item"><code>B</code> Back</div>
+      <div class="legend-item"><code>M</code> Middle</div>
+      <div class="legend-item"><code>T</code> Top</div>
+      <div class="legend-item"><code>LF</code> Left Front</div>
+      <div class="legend-item"><code>RF</code> Right Front</div>
+      <div class="legend-item"><code>LB</code> Left Back</div>
+      <div class="legend-item"><code>RB</code> Right Back</div>
+      <div class="legend-item"><code>LM</code> Left Middle</div>
+      <div class="legend-item"><code>RM</code> Right Middle</div>
     </div>
   </div>
-  <div class="grid">
-        <div class="card buy-card">
-          <img src="ws/BT_Ball_Bearing_608ZZ_Merged__1__1.png" alt="BT Ball Bearing 608ZZ Merged  1" loading="lazy">
-          <div class="label"><strong>BT Ball Bearing 608ZZ Merged  1</strong>Purchase Required</div>
-        </div>
-        <div class="card buy-card">
-          <img src="ws/B_Top_Main_25mm_Ball_Bearing_Linkage_Arms_SKF_6005__RS_286-7669__1.png" alt="B Top Main 25mm Ball Bearing Linkage Arms SKF 6005  RS 286-7669" loading="lazy">
-          <div class="label"><strong>B Top Main 25mm Ball Bearing Linkage Arms SKF 6005  RS 286-7669</strong>Purchase Required</div>
-        </div>
-        <div class="card buy-card">
-          <img src="ws/M3_Nuts_90592A085_1.png" alt="M3 Nuts 90592A085" loading="lazy">
-          <div class="label"><strong>M3 Nuts 90592A085</strong>Purchase Required</div>
-        </div>
-        <div class="card buy-card">
-          <img src="ws/RM_Ball_Bearing_608ZZ_Body_Mount_to_Linkage_arms_1.png" alt="RM Ball Bearing 608ZZ Body Mount to Linkage arms" loading="lazy">
-          <div class="label"><strong>RM Ball Bearing 608ZZ Body Mount to Linkage arms</strong>Purchase Required</div>
-        </div>
+
+  <div class="sh">
+    <h2>&#x1F6D2; Parts to Purchase</h2>
+    <span class="badge buy">Hardware</span>
+  </div>
+  <p style="color:#8b949e;font-size:0.85rem;margin-bottom:20px">
+    The following items must be purchased. Order the exact part or a dimensionally and functionally equivalent substitute.
+  </p>
+
+  <table class="spec-table">
+    <thead>
+      <tr><th>Part</th><th>Qty</th><th>Specification / Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>DC Drive Motors</strong></td>
+        <td class="qty">6&times;</td>
+        <td class="rec">JGA25-370 12V 150/200RPM Encoder (&ldquo;Deceleration&rdquo;) Motor</td>
+      </tr>
+      <tr>
+        <td><strong>Servo Motors</strong></td>
+        <td class="qty">4&times;</td>
+        <td class="rec">DS3218 Pro 20KG 180-Degree Digital Servo</td>
+      </tr>
+      <tr>
+        <td><strong>Motor Driver</strong></td>
+        <td class="qty">1&times;</td>
+        <td class="rec">MD40 4-Channel Closed-Loop I2C Motor Driver Board</td>
+      </tr>
+      <tr>
+        <td><strong>Ball Bearing 608</strong></td>
+        <td class="qty">4&times;</td>
+        <td class="rec">608ZZ or equivalent &mdash; <strong style="color:#fb923c">recommended: 608RS for better outdoor/dust resistance</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Ball Bearing 6005RS</strong></td>
+        <td class="qty">&mdash;</td>
+        <td class="rec">SKF 6005RS or equivalent 25mm bearing for main linkage arm pivots</td>
+      </tr>
+      <tr>
+        <td><strong>Servo Bolt</strong></td>
+        <td class="qty">&mdash;</td>
+        <td class="rec">Standard servo mounting bolt &mdash; check your servo kit; quantity depends on final servo count</td>
+      </tr>
+      <tr>
+        <td><strong>M3 Nuts</strong></td>
+        <td class="qty">&mdash;</td>
+        <td class="rec">Standard M3 hex nuts (90592A085 or equivalent)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="sh">
+    <h2>&#x1F5C3;&#xFE0F; Purchased Hardware &mdash; Preview</h2>
+    <span class="badge buy">Buy</span>
+  </div>
+  <div class="grid" style="margin-bottom:48px">
+    <div class="card buy-card">
+      <img src="ws/Ball_Bearing_6005RS.png" alt="Ball Bearing 6005RS" loading="lazy">
+      <div class="lbl"><strong>Ball Bearing 6005RS</strong><span class="badge buy" style="font-size:0.68rem">Purchase</span><div class="note">SKF 6005RS or equivalent &mdash; main linkage arm pivots</div></div>
+    </div>
+    <div class="card buy-card">
+      <img src="ws/Ball_Bearing_608ZZ.png" alt="Ball Bearing 608ZZ" loading="lazy">
+      <div class="lbl"><strong>Ball Bearing 608ZZ</strong><span class="badge buy" style="font-size:0.68rem">Purchase</span><div class="note">4&times; required &mdash; <strong style='color:#fb923c'>recommend 608RS for outdoor/dust resistance</strong></div></div>
+    </div>
+    <div class="card buy-card">
+      <img src="ws/Servo_Bolt.png" alt="Servo Bolt" loading="lazy">
+      <div class="lbl"><strong>Servo Bolt</strong><span class="badge buy" style="font-size:0.68rem">Purchase</span><div class="note">Check your servo kit for included bolts; qty depends on servo count</div></div>
+    </div>
+    <div class="card buy-card">
+      <div class="no-img">No preview</div>
+      <div class="lbl"><strong>M3 Nuts (90592A085)</strong><span class="badge buy" style="font-size:0.68rem">Purchase</span><div class="note">Standard M3 hex nuts or equivalent</div></div>
+    </div>
   </div>
 
-</main>
+  <div class="sh">
+    <h2>&#x1F5A8; Printable Parts</h2>
+    <span class="badge print">115 parts</span>
+    <p>Print these on your FDM or resin printer</p>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <img src="ws/Bottom_Bracket_Body_Linkage.png" alt="Bottom Bracket Body Linkage" loading="lazy">
+      <div class="lbl"><strong>Bottom Bracket Body Linkage</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/FL_Axel_Motor_Cover.png" alt="FL Axel Motor Cover" loading="lazy">
+      <div class="lbl"><strong>FL Axel Motor Cover</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LB_And_Middle_Mounting_Brack_Bolt_Part_B.png" alt="LB And Middle Mounting Brack Bolt Part B" loading="lazy">
+      <div class="lbl"><strong>LB And Middle Mounting Brack Bolt Part B</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LB_Axel.png" alt="LB Axel" loading="lazy">
+      <div class="lbl"><strong>LB Axel</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LB_Rocker_Arm.png" alt="LB Rocker Arm" loading="lazy">
+      <div class="lbl"><strong>LB Rocker Arm</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LB_Rocker_Arm_to_Back_and_Middle_Mounting_Bracket.png" alt="LB Rocker Arm to Back and Middle Mounting Bracket" loading="lazy">
+      <div class="lbl"><strong>LB Rocker Arm to Back and Middle Mounting Bracket</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LB_Servo_Bottom_Cover.png" alt="LB Servo Bottom Cover" loading="lazy">
+      <div class="lbl"><strong>LB Servo Bottom Cover</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LB_Servo_Gear.png" alt="LB Servo Gear" loading="lazy">
+      <div class="lbl"><strong>LB Servo Gear</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LB_Servo_Housing_Cover.png" alt="LB Servo Housing Cover" loading="lazy">
+      <div class="lbl"><strong>LB Servo Housing Cover</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LB_Servo_MG996R.png" alt="LB Servo MG996R" loading="lazy">
+      <div class="lbl"><strong>LB Servo MG996R</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LB_Servo_Wheel_Assembly_Mount.png" alt="LB Servo Wheel Assembly Mount" loading="lazy">
+      <div class="lbl"><strong>LB Servo Wheel Assembly Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LB_Servo_to_Wheel_Mount.png" alt="LB Servo to Wheel Mount" loading="lazy">
+      <div class="lbl"><strong>LB Servo to Wheel Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LB_Spacer_Washer_Servo_Mounting_Arm.png" alt="LB Spacer Washer Servo Mounting Arm" loading="lazy">
+      <div class="lbl"><strong>LB Spacer Washer Servo Mounting Arm</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LB_Suspension_Bolt_Part_A.png" alt="LB Suspension Bolt Part A" loading="lazy">
+      <div class="lbl"><strong>LB Suspension Bolt Part A</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LB_Suspension_Bolt_Part_B.png" alt="LB Suspension Bolt Part B" loading="lazy">
+      <div class="lbl"><strong>LB Suspension Bolt Part B</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LB_Suspension_Bolt_Part_C.png" alt="LB Suspension Bolt Part C" loading="lazy">
+      <div class="lbl"><strong>LB Suspension Bolt Part C</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LB_Wheel.png" alt="LB Wheel" loading="lazy">
+      <div class="lbl"><strong>LB Wheel</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LB_Wheel_Mount.png" alt="LB Wheel Mount" loading="lazy">
+      <div class="lbl"><strong>LB Wheel Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LB_Wheel_Rotor.png" alt="LB Wheel Rotor" loading="lazy">
+      <div class="lbl"><strong>LB Wheel Rotor</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LB_and_Middle_Bracket_Bolt_Part_A.png" alt="LB and Middle Bracket Bolt Part A" loading="lazy">
+      <div class="lbl"><strong>LB and Middle Bracket Bolt Part A</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LB_and_Middle_Mounting_Block_Part_A.png" alt="LB and Middle Mounting Block Part A" loading="lazy">
+      <div class="lbl"><strong>LB and Middle Mounting Block Part A</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LB_and_Middle_Mounting_Block_Part_B.png" alt="LB and Middle Mounting Block Part B" loading="lazy">
+      <div class="lbl"><strong>LB and Middle Mounting Block Part B</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LB_to_Middle_Rocker_Arm_Tube_for_Suspension_Bolt_Part_C.png" alt="LB to Middle Rocker Arm Tube for Suspension Bolt Part C" loading="lazy">
+      <div class="lbl"><strong>LB to Middle Rocker Arm Tube for Suspension Bolt Part C</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LF_Axel.png" alt="LF Axel" loading="lazy">
+      <div class="lbl"><strong>LF Axel</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LF_Connector_Screw_Servo_Mount_to_Suspension_Bolt.png" alt="LF Connector Screw Servo Mount to Suspension Bolt" loading="lazy">
+      <div class="lbl"><strong>LF Connector Screw Servo Mount to Suspension Bolt</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LF_DC-motor_v10.png" alt="LF DC-motor v10" loading="lazy">
+      <div class="lbl"><strong>LF DC-motor v10</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LF_Rocker_Arm.png" alt="LF Rocker Arm" loading="lazy">
+      <div class="lbl"><strong>LF Rocker Arm</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LF_Servo_Gear.png" alt="LF Servo Gear" loading="lazy">
+      <div class="lbl"><strong>LF Servo Gear</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LF_Servo_Housing_Cover.png" alt="LF Servo Housing Cover" loading="lazy">
+      <div class="lbl"><strong>LF Servo Housing Cover</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LF_Servo_MG996R.png" alt="LF Servo MG996R" loading="lazy">
+      <div class="lbl"><strong>LF Servo MG996R</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LF_Servo_Motor_Mount_Washer.png" alt="LF Servo Motor Mount Washer" loading="lazy">
+      <div class="lbl"><strong>LF Servo Motor Mount Washer</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LF_Servo_Wheel_Assembly_Mount.png" alt="LF Servo Wheel Assembly Mount" loading="lazy">
+      <div class="lbl"><strong>LF Servo Wheel Assembly Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LF_Servo_to_Wheel_Mount.png" alt="LF Servo to Wheel Mount" loading="lazy">
+      <div class="lbl"><strong>LF Servo to Wheel Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LF_Suspension_Bold_Part_B.png" alt="LF Suspension Bold Part B" loading="lazy">
+      <div class="lbl"><strong>LF Suspension Bold Part B</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LF_Suspension_Bolt_Part_A.png" alt="LF Suspension Bolt Part A" loading="lazy">
+      <div class="lbl"><strong>LF Suspension Bolt Part A</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LF_Suspension_Bolt_Part_C.png" alt="LF Suspension Bolt Part C" loading="lazy">
+      <div class="lbl"><strong>LF Suspension Bolt Part C</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LF_WHeel_Mount.png" alt="LF WHeel Mount" loading="lazy">
+      <div class="lbl"><strong>LF WHeel Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LF_Wheel.png" alt="LF Wheel" loading="lazy">
+      <div class="lbl"><strong>LF Wheel</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LF_Wheel_Rotor.png" alt="LF Wheel Rotor" loading="lazy">
+      <div class="lbl"><strong>LF Wheel Rotor</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LM_Axel_Cover.png" alt="LM Axel Cover" loading="lazy">
+      <div class="lbl"><strong>LM Axel Cover</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LM_Connector_Rod_Bolt_Part_C.png" alt="LM Connector Rod Bolt Part C" loading="lazy">
+      <div class="lbl"><strong>LM Connector Rod Bolt Part C</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LM_Linkage_Mount_to_Body_Mount_and_Rocker_Arm_Connector.png" alt="LM Linkage Mount to Body Mount and Rocker Arm Connector" loading="lazy">
+      <div class="lbl"><strong>LM Linkage Mount to Body Mount and Rocker Arm Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LM_Main_Suspension_Mounting_Block.png" alt="LM Main Suspension Mounting Block" loading="lazy">
+      <div class="lbl"><strong>LM Main Suspension Mounting Block</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LM_Main_Suspension_Mounting_Block_to_Body.png" alt="LM Main Suspension Mounting Block to Body" loading="lazy">
+      <div class="lbl"><strong>LM Main Suspension Mounting Block to Body</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LM_Mounting_Bracket_Linkage_Arm_and_Rocker_Arm_Connector.png" alt="LM Mounting Bracket Linkage Arm and Rocker Arm Connector" loading="lazy">
+      <div class="lbl"><strong>LM Mounting Bracket Linkage Arm and Rocker Arm Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LM_Mounting_Bracket_for_Body_Body_Mount_and_Linkage_Arm.png" alt="LM Mounting Bracket for Body Body Mount and Linkage Arm" loading="lazy">
+      <div class="lbl"><strong>LM Mounting Bracket for Body Body Mount and Linkage Arm</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LM_Rocker_Arm.png" alt="LM Rocker Arm" loading="lazy">
+      <div class="lbl"><strong>LM Rocker Arm</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LM_Suspension_Bold_Part_B.png" alt="LM Suspension Bold Part B" loading="lazy">
+      <div class="lbl"><strong>LM Suspension Bold Part B</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LM_Suspension_Bolt_Part_A.png" alt="LM Suspension Bolt Part A" loading="lazy">
+      <div class="lbl"><strong>LM Suspension Bolt Part A</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LM_Wheel.png" alt="LM Wheel" loading="lazy">
+      <div class="lbl"><strong>LM Wheel</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LM_Wheel_Assembly_Mount.png" alt="LM Wheel Assembly Mount" loading="lazy">
+      <div class="lbl"><strong>LM Wheel Assembly Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LM_Wheel_Axel.png" alt="LM Wheel Axel" loading="lazy">
+      <div class="lbl"><strong>LM Wheel Axel</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LM_Wheel_Mount.png" alt="LM Wheel Mount" loading="lazy">
+      <div class="lbl"><strong>LM Wheel Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LM_Wheel_Rotor.png" alt="LM Wheel Rotor" loading="lazy">
+      <div class="lbl"><strong>LM Wheel Rotor</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LR_Axel_Motor_Cover.png" alt="LR Axel Motor Cover" loading="lazy">
+      <div class="lbl"><strong>LR Axel Motor Cover</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/LR_Bracket_Threaded_Rod_for_Rocker_Arm_to_Connector.png" alt="LR Bracket Threaded Rod for Rocker Arm to Connector" loading="lazy">
+      <div class="lbl"><strong>LR Bracket Threaded Rod for Rocker Arm to Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/L_Linkage_Arm.png" alt="L Linkage Arm" loading="lazy">
+      <div class="lbl"><strong>L Linkage Arm</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/L_Suspension_Body_Mount.png" alt="L Suspension Body Mount" loading="lazy">
+      <div class="lbl"><strong>L Suspension Body Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/Main_Rover_Body_panel.png" alt="Main Rover Body panel" loading="lazy">
+      <div class="lbl"><strong>Main Rover Body panel</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RB_Axel_Motor_Cover.png" alt="RB Axel Motor Cover" loading="lazy">
+      <div class="lbl"><strong>RB Axel Motor Cover</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RB_Axel_Mount.png" alt="RB Axel Mount" loading="lazy">
+      <div class="lbl"><strong>RB Axel Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RB_Rocker_Arm.png" alt="RB Rocker Arm" loading="lazy">
+      <div class="lbl"><strong>RB Rocker Arm</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RB_Rocker_Arm_Threaded_ConnectorPart_392__Part_392__Part_392__Part_392__1.png" alt="RB Rocker Arm Threaded ConnectorPart 392  Part 392  Part 392  Part 392  1" loading="lazy">
+      <div class="lbl"><strong>RB Rocker Arm Threaded ConnectorPart 392  Part 392  Part 392  Part 392  1</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RB_Rocker_Arm_to_Back_and_Middle_Mounting_Bracket.png" alt="RB Rocker Arm to Back and Middle Mounting Bracket" loading="lazy">
+      <div class="lbl"><strong>RB Rocker Arm to Back and Middle Mounting Bracket</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RB_Servo_Gear.png" alt="RB Servo Gear" loading="lazy">
+      <div class="lbl"><strong>RB Servo Gear</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RB_Servo_MG996R.png" alt="RB Servo MG996R" loading="lazy">
+      <div class="lbl"><strong>RB Servo MG996R</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RB_Servo_Wheel_Assembly_Mount.png" alt="RB Servo Wheel Assembly Mount" loading="lazy">
+      <div class="lbl"><strong>RB Servo Wheel Assembly Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RB_Servo_to_Wheel_Mount.png" alt="RB Servo to Wheel Mount" loading="lazy">
+      <div class="lbl"><strong>RB Servo to Wheel Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RB_Suspension_Bold_Part_B.png" alt="RB Suspension Bold Part B" loading="lazy">
+      <div class="lbl"><strong>RB Suspension Bold Part B</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RB_Suspension_Bolt_Part_A.png" alt="RB Suspension Bolt Part A" loading="lazy">
+      <div class="lbl"><strong>RB Suspension Bolt Part A</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RB_Suspension_Bolt_Part_B.png" alt="RB Suspension Bolt Part B" loading="lazy">
+      <div class="lbl"><strong>RB Suspension Bolt Part B</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RB_Suspension_Bolt_Part_C.png" alt="RB Suspension Bolt Part C" loading="lazy">
+      <div class="lbl"><strong>RB Suspension Bolt Part C</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RB_Suspension_Rod_Part_A.png" alt="RB Suspension Rod Part A" loading="lazy">
+      <div class="lbl"><strong>RB Suspension Rod Part A</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RB_Wheel.png" alt="RB Wheel" loading="lazy">
+      <div class="lbl"><strong>RB Wheel</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RB_Wheel_Mount.png" alt="RB Wheel Mount" loading="lazy">
+      <div class="lbl"><strong>RB Wheel Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RB_Wheel_Rotor.png" alt="RB Wheel Rotor" loading="lazy">
+      <div class="lbl"><strong>RB Wheel Rotor</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RB_Wheel_Washer_Wheel_Mount_Axel.png" alt="RB Wheel Washer Wheel Mount Axel" loading="lazy">
+      <div class="lbl"><strong>RB Wheel Washer Wheel Mount Axel</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RB_and_Middle_Connector_Part_A_threaded_rod_connector.png" alt="RB and Middle Connector Part A threaded rod connector" loading="lazy">
+      <div class="lbl"><strong>RB and Middle Connector Part A threaded rod connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RB_and_Middle_Mounting_Block_Part_A.png" alt="RB and Middle Mounting Block Part A" loading="lazy">
+      <div class="lbl"><strong>RB and Middle Mounting Block Part A</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RB_and_Middle_Mounting_Block_Part_B.png" alt="RB and Middle Mounting Block Part B" loading="lazy">
+      <div class="lbl"><strong>RB and Middle Mounting Block Part B</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RF_Axel.png" alt="RF Axel" loading="lazy">
+      <div class="lbl"><strong>RF Axel</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RF_Axel_Motor_Cover.png" alt="RF Axel Motor Cover" loading="lazy">
+      <div class="lbl"><strong>RF Axel Motor Cover</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RF_DC-motor_v10.png" alt="RF DC-motor v10" loading="lazy">
+      <div class="lbl"><strong>RF DC-motor v10</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RF_Rocker_Arm.png" alt="RF Rocker Arm" loading="lazy">
+      <div class="lbl"><strong>RF Rocker Arm</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RF_Screw_for_Rocker_Arm_to_Wheel_Assembly.png" alt="RF Screw for Rocker Arm to Wheel Assembly" loading="lazy">
+      <div class="lbl"><strong>RF Screw for Rocker Arm to Wheel Assembly</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RF_Servo_Gear.png" alt="RF Servo Gear" loading="lazy">
+      <div class="lbl"><strong>RF Servo Gear</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RF_Servo_MG996R.png" alt="RF Servo MG996R" loading="lazy">
+      <div class="lbl"><strong>RF Servo MG996R</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RF_Servo_Mount_Cover.png" alt="RF Servo Mount Cover" loading="lazy">
+      <div class="lbl"><strong>RF Servo Mount Cover</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RF_Servo_Wheel_Mount_Assembly.png" alt="RF Servo Wheel Mount Assembly" loading="lazy">
+      <div class="lbl"><strong>RF Servo Wheel Mount Assembly</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RF_Servo_to_Wheel_Mount_Connector.png" alt="RF Servo to Wheel Mount Connector" loading="lazy">
+      <div class="lbl"><strong>RF Servo to Wheel Mount Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RF_Suspension_Bolt_Part_C.png" alt="RF Suspension Bolt Part C" loading="lazy">
+      <div class="lbl"><strong>RF Suspension Bolt Part C</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RF_Suspension_Bolt_Threaded_Part_C.png" alt="RF Suspension Bolt Threaded Part C" loading="lazy">
+      <div class="lbl"><strong>RF Suspension Bolt Threaded Part C</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RF_Suspension_Mounting_Bolt_Part_A.png" alt="RF Suspension Mounting Bolt Part A" loading="lazy">
+      <div class="lbl"><strong>RF Suspension Mounting Bolt Part A</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RF_Wheel.png" alt="RF Wheel" loading="lazy">
+      <div class="lbl"><strong>RF Wheel</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RF_Wheel_Rotor.png" alt="RF Wheel Rotor" loading="lazy">
+      <div class="lbl"><strong>RF Wheel Rotor</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RF_Wheel_Rotor_Washer_Spacer.png" alt="RF Wheel Rotor Washer Spacer" loading="lazy">
+      <div class="lbl"><strong>RF Wheel Rotor Washer Spacer</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RL_Wheel_Mount_Linkage_Arm.png" alt="RL Wheel Mount Linkage Arm" loading="lazy">
+      <div class="lbl"><strong>RL Wheel Mount Linkage Arm</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RM_Axel.png" alt="RM Axel" loading="lazy">
+      <div class="lbl"><strong>RM Axel</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RM_Axel_Cover_Thing.png" alt="RM Axel Cover Thing" loading="lazy">
+      <div class="lbl"><strong>RM Axel Cover Thing</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RM_Axel_Motor_Cover.png" alt="RM Axel Motor Cover" loading="lazy">
+      <div class="lbl"><strong>RM Axel Motor Cover</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RM_Linkage_Mount_to_Body_Mount_and_Rocker_Arm_connector.png" alt="RM Linkage Mount to Body Mount and Rocker Arm connector" loading="lazy">
+      <div class="lbl"><strong>RM Linkage Mount to Body Mount and Rocker Arm connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RM_Mounting_Bracket_Body_to_WS_suspension_system.png" alt="RM Mounting Bracket Body to WS suspension system" loading="lazy">
+      <div class="lbl"><strong>RM Mounting Bracket Body to WS suspension system</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RM_Mounting_Bracket_Linkage_Arm_and_Body_Connector.png" alt="RM Mounting Bracket Linkage Arm and Body Connector" loading="lazy">
+      <div class="lbl"><strong>RM Mounting Bracket Linkage Arm and Body Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RM_Rocker_Arm_to_Middle_and_Rear_Mounting_Bracket.png" alt="RM Rocker Arm to Middle and Rear Mounting Bracket" loading="lazy">
+      <div class="lbl"><strong>RM Rocker Arm to Middle and Rear Mounting Bracket</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RM_Suspension_Bolt_Part_A.png" alt="RM Suspension Bolt Part A" loading="lazy">
+      <div class="lbl"><strong>RM Suspension Bolt Part A</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RM_Suspension_Bolt_Part_B.png" alt="RM Suspension Bolt Part B" loading="lazy">
+      <div class="lbl"><strong>RM Suspension Bolt Part B</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RM_Suspension_Bolt_Part_C.png" alt="RM Suspension Bolt Part C" loading="lazy">
+      <div class="lbl"><strong>RM Suspension Bolt Part C</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RM_Suspension_Bolt_to_Middle_and_Back_Mounting_Block.png" alt="RM Suspension Bolt to Middle and Back Mounting Block" loading="lazy">
+      <div class="lbl"><strong>RM Suspension Bolt to Middle and Back Mounting Block</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RM_Wheel.png" alt="RM Wheel" loading="lazy">
+      <div class="lbl"><strong>RM Wheel</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/RM_Wheel_Rotor.png" alt="RM Wheel Rotor" loading="lazy">
+      <div class="lbl"><strong>RM Wheel Rotor</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/R_Linkage_arm.png" alt="R Linkage arm" loading="lazy">
+      <div class="lbl"><strong>R Linkage arm</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/Right_WS_body_mount.png" alt="Right WS body mount" loading="lazy">
+      <div class="lbl"><strong>Right WS body mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/Top_Bracket_Body_Linkage.png" alt="Top Bracket Body Linkage" loading="lazy">
+      <div class="lbl"><strong>Top Bracket Body Linkage</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/Washer_Servo_Wheel_Mount.png" alt="Washer Servo Wheel Mount" loading="lazy">
+      <div class="lbl"><strong>Washer Servo Wheel Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+    <div class="card">
+      <img src="ws/Washer_Servo_to_Wheel_Mount.png" alt="Washer Servo to Wheel Mount" loading="lazy">
+      <div class="lbl"><strong>Washer Servo to Wheel Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    </div>
+  </div>
+
 <footer>
-  Rover Parts Catalog &mdash; more sections coming soon
+  Rover Parts Catalog &mdash; Wheel &amp; Suspension System &mdash;<br>
+  More sections coming soon: Body &bull; Camera &bull; Arm
 </footer>
+</main>
 </body>
 </html>
