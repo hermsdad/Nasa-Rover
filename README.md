@@ -1,5 +1,8 @@
 This Rover was designed by user: https://github.com/ahil01
 
+<img src="docs/other/rover_hero.png" alt="NASA Inspired 6-wheel rocker-bogie rover">
+
+
 I am just collaborating to make this more approachable from a print and build perspective.
 A few things about my build version. 
 I will not be using the solar array and instead will be using a 12v LiPo battery. This will power my Raspberry Pi 4b along with all the servo's, motors, and various control boards. I am starting with the basics and will then add the full capabilities to the Camera and Arm. I will also be arming the Rover with various sensors, lights, and other components. 
