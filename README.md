@@ -1,4 +1,4 @@
-This Rover was designed by user: https://github.com/ahil01
+This Rover was designed by user:  <a class="gh-btn" href="https://github.com/ahil01)" target="_blank">ahi101</a>
 
 <img src="docs/other/rover_hero.png" alt="NASA Inspired 6-wheel rocker-bogie rover">
 
