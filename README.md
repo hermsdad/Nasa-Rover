@@ -8,7 +8,8 @@ A few things about my build version.
 I will not be using the solar array and instead will be using a 12v LiPo battery. This will power my Raspberry Pi 4b along with all the servo's, motors, and various control boards. I am starting with the basics and will then add the full capabilities to the Camera and Arm. I will also be arming the Rover with various sensors, lights, and other components. 
 Please check out my parts pages to see the different printable parts as well as the parts you need to buy.
 I personally have not printed any of this yet, but will update as I go along.
-Visit ahi101's page to learn more about all the work and thought he put into designing this rover. 
+Visit <a class="gh-btn" href="https://github.com/ahil01" target="_blank" rel="noopener noreferrer">ahi101's rover page</a> to learn more about all the work and thought he put into designing this rover. 
+
 Some key features I'm looking forward to are:
 
 Every single component—from the main chassis supporting the side-oriented solar panels to the custom all-wheel suspension with hidden internal wiring—is fully optimized for additive manufacturing. No specialized machining or custom metalwork is required. Just slice, print, and assemble.
