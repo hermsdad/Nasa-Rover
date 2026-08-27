@@ -28,7 +28,7 @@ Internal Hollow Routing: Engineered with continuous hollow structural tubes and 
 
 100% Additive Manufacturing Design: Optimized with clean print orientations, minimal support requirements, and tight mechanical tolerances so all pivot brackets, joints, and arm linkages can be 3D printed directly for high rigidity and straightforward assembly.
 
-# Internal Wire Routing System
+Internal Wire Routing System
 
 Fully Enclosed Pathways: All structural suspension tubes and pivot brackets feature built-in hollow internal conduits, routing drive motor power, encoder data, and steering lines entirely through the suspension arms.
 
