@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Rover Parts Catalog &mdash; Arm</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+         background:#0d1117;color:#e6edf3;min-height:100vh}
+    a{color:#388bfd;text-decoration:none}a:hover{text-decoration:underline}
+    .top-nav{background:#010409;border-bottom:1px solid #21262d;padding:0 40px;
+             display:flex;align-items:center;overflow-x:auto}
+    .top-nav a,.top-nav span{display:inline-block;padding:10px 16px;font-size:0.82rem;
+                              white-space:nowrap;border-bottom:2px solid transparent;transition:color .2s}
+    .top-nav a{color:#8b949e}
+    .top-nav a:hover{color:#f0f6fc;text-decoration:none}
+    .top-nav a.active{color:#f0f6fc;border-bottom-color:#388bfd}
+    .top-nav a.home{color:#f0f6fc;font-weight:700;margin-right:4px;
+                    border-right:1px solid #21262d;padding-right:20px}
+    .top-nav span{color:#484f58;cursor:default}
+    header{background:#161b22;border-bottom:1px solid #30363d;padding:24px 40px}
+    header h1{font-size:1.6rem;font-weight:700;color:#f0f6fc}
+    header p{color:#8b949e;font-size:0.88rem;margin-top:5px}
+    main{padding:40px;max-width:1600px;margin:0 auto}
+    .hero{margin-bottom:32px;border-radius:10px;overflow:hidden;border:1px solid #30363d;
+          max-width:720px}
+    .hero img{width:100%;display:block}
+    .hero-cap{text-align:center;color:#484f58;font-size:0.78rem;margin-top:8px}
+    .notice{background:#161b22;border:1px solid #f97316;border-radius:8px;
+            padding:16px 20px;margin-bottom:32px;font-size:0.85rem;color:#fdba74;line-height:1.6}
+    .notice strong{color:#fb923c;display:block;margin-bottom:4px;font-size:0.9rem}
+    .sh{display:flex;align-items:baseline;gap:12px;margin:40px 0 20px}
+    .sh:first-of-type{margin-top:0}
+    .sh h2{font-size:1.1rem;font-weight:600;color:#f0f6fc}
+    .sh p{color:#8b949e;font-size:0.82rem}
+    .badge{font-size:0.72rem;padding:2px 10px;border-radius:12px;font-weight:600;white-space:nowrap}
+    .badge.print{background:#238636;color:#fff}
+    .badge.buy{background:#9a3412;color:#fff}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+    .card{background:#161b22;border:1px solid #30363d;border-radius:8px;
+          overflow:hidden;transition:border-color .2s,transform .2s}
+    .card:hover{border-color:#388bfd;transform:translateY(-2px)}
+    .card.buy-card:hover{border-color:#f97316}
+    .card img{width:100%;aspect-ratio:1/1;object-fit:contain;
+              background:#0d1117;padding:8px;display:block}
+    .card .lbl{padding:9px 11px;font-size:0.76rem;color:#8b949e;
+               border-top:1px solid #30363d;line-height:1.4;word-break:break-word}
+    .card .lbl strong{display:block;color:#e6edf3;font-size:0.8rem;margin-bottom:3px}
+    .card.group-card{border-color:#388bfd;cursor:default}
+    .card.group-card .lbl strong{color:#388bfd;font-size:0.85rem}
+    .group-block{margin-bottom:48px}
+    footer{text-align:center;padding:40px;color:#484f58;font-size:0.78rem;
+           border-top:1px solid #21262d;margin-top:60px}
+  </style>
+</head>
+<body>
+<nav class="top-nav">
+  <a href="../index.html" class="home">&#x1F916; Rover</a>
+  <a href="../ws/ws.html">Wheel &amp; Suspension</a>
+  <a href="../body/body.html">Body</a>
+  <a href="../camera/camera.html">Camera</a>
+  <a href="arm.html" class="active">Arm</a>
+  <span>Sensors</span>
+  <span>Solar</span>
+  <span>Other Body Parts</span>
+</nav>
+<header>
+  <h1>&#x1F916; Rover Parts Catalog</h1>
+  <p>Robotic Arm System &mdash; printable parts and hardware</p>
+</header>
+<main>
+  <div class="hero">
+    <img src="../other/arm_assembly.png" alt="Robotic Arm assembled">
+    <p class="hero-cap">Robotic Arm System &mdash; assembled view</p>
+  </div>
+  <div class="notice">
+    <strong>&#x26A0;&#xFE0F; Disclaimer</strong>
+    Some parts may be duplicates. Because these parts have not yet been printed and verified,
+    each is listed separately. This list will be updated once physical prints are confirmed.
+  </div>
+  <!-- ===== ARM GROUP ===== -->
+  <div class="group-block">
+    <div class="sh"><h2>&#x1F9BE; Arm</h2><span class="badge print">5 parts</span></div>
+    <div class="grid">
+      <div class="card group-card">
+        <img src="Arm.png" alt="Arm group" loading="lazy">
+        <div class="lbl"><strong>Arm &mdash; Group</strong></div>
+      </div>
+      <div class="card">
+        <img src="Arm Bottom Connector.png" alt="Arm Bottom Connector" loading="lazy">
+        <div class="lbl"><strong>Arm Bottom Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="Arm Middle to Bottom Connector.png" alt="Arm Middle to Bottom Connector" loading="lazy">
+        <div class="lbl"><strong>Arm Middle to Bottom Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="Arm Middle to Top Connector.png" alt="Arm Middle to Top Connector" loading="lazy">
+        <div class="lbl"><strong>Arm Middle to Top Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="Arm Tube Bottom.png" alt="Arm Tube Bottom" loading="lazy">
+        <div class="lbl"><strong>Arm Tube Bottom</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="Arm Tube Top.png" alt="Arm Tube Top" loading="lazy">
+        <div class="lbl"><strong>Arm Tube Top</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== GR GROUP ===== -->
+  <div class="group-block">
+    <div class="sh"><h2>&#x2699;&#xFE0F; Grip Rotator (GR)</h2><span class="badge print">3 parts</span></div>
+    <div class="grid">
+      <div class="card group-card">
+        <img src="GR.png" alt="GR group" loading="lazy">
+        <div class="lbl"><strong>GR &mdash; Group</strong></div>
+      </div>
+      <div class="card">
+        <img src="GR Arm Connector Base.png" alt="GR Arm Connector Base" loading="lazy">
+        <div class="lbl"><strong>GR Arm Connector Base</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="GR Arm Connector RS.png" alt="GR Arm Connector RS" loading="lazy">
+        <div class="lbl"><strong>GR Arm Connector RS</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="GR Main body.png" alt="GR Main body" loading="lazy">
+        <div class="lbl"><strong>GR Main Body</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+    </div>
+  </div>
+  <!-- ===== MRB GROUP ===== -->
+  <div class="group-block">
+    <div class="sh"><h2>&#x1F527; Mount Rotator Base (MRB)</h2><span class="badge print">3 parts</span></div>
+    <div class="grid">
+      <div class="card group-card">
+        <img src="MRB.png" alt="MRB group" loading="lazy">
+        <div class="lbl"><strong>MRB &mdash; Group</strong></div>
+      </div>
+      <div class="card">
+        <img src="MRB Connector Servo Housing.png" alt="MRB Connector Servo Housing" loading="lazy">
+        <div class="lbl"><strong>MRB Connector Servo Housing</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="MRB Mount Bottom.png" alt="MRB Mount Bottom" loading="lazy">
+        <div class="lbl"><strong>MRB Mount Bottom</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="MRB connector Top.png" alt="MRB Connector Top" loading="lazy">
+        <div class="lbl"><strong>MRB Connector Top</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PINCER GROUP ===== -->
+  <div class="group-block">
+    <div class="sh"><h2>&#x1F9F2; Pincer</h2><span class="badge print">13 parts</span></div>
+    <div class="grid">
+      <div class="card group-card">
+        <img src="Pincer.png" alt="Pincer group" loading="lazy">
+        <div class="lbl"><strong>Pincer &mdash; Group</strong></div>
+      </div>
+      <div class="card">
+        <img src="Pincer Arm x4.png" alt="Pincer Arm x4" loading="lazy">
+        <div class="lbl"><strong>Pincer Arm x4</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="Pincer Gear R 25T.png" alt="Pincer Gear R 25T" loading="lazy">
+        <div class="lbl"><strong>Pincer Gear R 25T</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="Pincer Servo Gear.png" alt="Pincer Servo Gear" loading="lazy">
+        <div class="lbl"><strong>Pincer Servo Gear</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="Pincer Servo MG996R Casing.png" alt="Pincer Servo MG996R Casing" loading="lazy">
+        <div class="lbl"><strong>Pincer Servo MG996R Casing</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="Pincer Top Plate.png" alt="Pincer Top Plate" loading="lazy">
+        <div class="lbl"><strong>Pincer Top Plate</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="Pincer gear L 25T.png" alt="Pincer Gear L 25T" loading="lazy">
+        <div class="lbl"><strong>Pincer Gear L 25T</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="Pincer lower arm L.png" alt="Pincer Lower Arm L" loading="lazy">
+        <div class="lbl"><strong>Pincer Lower Arm L</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="Pincer lower arm R v3_1__Body1.png" alt="Pincer Lower Arm R" loading="lazy">
+        <div class="lbl"><strong>Pincer Lower Arm R</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="Pincer lower plate.png" alt="Pincer Lower Plate" loading="lazy">
+        <div class="lbl"><strong>Pincer Lower Plate</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="Pincer middle plate.png" alt="Pincer Middle Plate" loading="lazy">
+        <div class="lbl"><strong>Pincer Middle Plate</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="Pincer rear plate and horn.png" alt="Pincer Rear Plate and Horn" loading="lazy">
+        <div class="lbl"><strong>Pincer Rear Plate and Horn</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="Pincer upper arm L.png" alt="Pincer Upper Arm L" loading="lazy">
+        <div class="lbl"><strong>Pincer Upper Arm L</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="Pincer upper arm R.png" alt="Pincer Upper Arm R" loading="lazy">
+        <div class="lbl"><strong>Pincer Upper Arm R</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+    </div>
+  </div>
+  <!-- ===== COMMON PRINTING OBJECTS ===== -->
+  <div class="group-block">
+    <div class="sh"><h2>&#x1F501; Common Printing Objects</h2><span class="badge print">4 types &times; 4 each</span></div>
+    <p style="color:#8b949e;font-size:0.85rem;margin-bottom:20px;line-height:1.6">
+      These parts are shared across multiple arm sub-assemblies. Each must be printed&nbsp;<strong style="color:#f0f6fc">4&times;</strong>.
+    </p>
+    <div class="grid">
+      <div class="card">
+        <img src="../other/Servo MG996R Casings.png" alt="Servo MG996R Casings" loading="lazy">
+        <div class="lbl"><strong>Servo MG996R Casings</strong><span class="badge print" style="font-size:0.68rem">3D Print &times;&thinsp;4</span></div>
+      </div>
+      <div class="card">
+        <img src="../other/Servo MG996R Door Panel.png" alt="Servo MG996R Door Panel" loading="lazy">
+        <div class="lbl"><strong>Servo MG996R Door Panel</strong><span class="badge print" style="font-size:0.68rem">3D Print &times;&thinsp;4</span></div>
+      </div>
+      <div class="card">
+        <img src="../other/Servo MG996R Gear.png" alt="Servo MG996R Gear" loading="lazy">
+        <div class="lbl"><strong>Servo MG996R Gear</strong><span class="badge print" style="font-size:0.68rem">3D Print &times;&thinsp;4</span></div>
+      </div>
+      <div class="card">
+        <img src="../other/Servo MG996R Horn.png" alt="Servo MG996R Horn" loading="lazy">
+        <div class="lbl"><strong>Servo MG996R Horn</strong><span class="badge print" style="font-size:0.68rem">3D Print &times;&thinsp;4</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PURCHASED PARTS ===== -->
+  <div class="sh"><h2>&#x1F6D2; Parts to Purchase</h2><span class="badge buy">Hardware</span></div>
+  <p style="color:#8b949e;font-size:0.85rem;margin-bottom:20px;line-height:1.6">
+    The following items must be purchased. Order the exact part or a dimensionally equivalent substitute.
+  </p>
+  <div class="grid" style="margin-bottom:48px">
+    <div class="card buy-card">
+      <img src="../other/Ball_Bearing_608ZZ.png" alt="Ball Bearing 608ZZ" loading="lazy">
+      <div class="lbl"><strong>Ball Bearing 608ZZ</strong> <span style="color:#f0f6fc;font-weight:700">&times;&thinsp;1</span><span class="badge buy" style="font-size:0.68rem;margin-left:6px">Purchase</span><div style="font-size:0.72rem;color:#6e7681;margin-top:4px">608ZZ or equivalent &mdash; <strong style="color:#fb923c">recommend 608RS for outdoor use</strong></div></div>
+    </div>
+    <div class="card buy-card">
+      <img src="../other/Servo Bolt.png" alt="Servo Bolt" loading="lazy">
+      <div class="lbl"><strong>Servo Bolt</strong> <span style="color:#f0f6fc;font-weight:700">&times;&thinsp;16</span><span class="badge buy" style="font-size:0.68rem;margin-left:6px">Purchase</span><div style="font-size:0.72rem;color:#6e7681;margin-top:4px">Standard servo mounting bolt &mdash; 16 required</div></div>
+    </div>
+    <div class="card buy-card">
+      <img src="../other/3mm SS Washer 90965A130.png" alt="3mm SS Washer 90965A130" loading="lazy">
+      <div class="lbl"><strong>3mm SS Washer 90965A130</strong> <span style="color:#f0f6fc;font-weight:700">&times;&thinsp;1</span><span class="badge buy" style="font-size:0.68rem;margin-left:6px">Purchase</span><div style="font-size:0.72rem;color:#6e7681;margin-top:4px">McMaster-Carr 90965A130 or equivalent</div></div>
+    </div>
+  </div>
+
+</main>
+<footer>
+  Rover Parts Catalog &mdash; Robotic Arm System &mdash;
+  <a href="../ws/ws.html">Wheel &amp; Suspension</a> &bull;
+  <a href="../body/body.html">Body</a> &bull;
+  <a href="../camera/camera.html">Camera</a> &bull;
+  Arm &bull; Sensors &bull; Solar
+</footer>
+</body>
+</html>
