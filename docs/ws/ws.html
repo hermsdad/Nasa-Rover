@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Rover Parts Catalog &mdash; Wheel &amp; Suspension</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+         background:#0d1117;color:#e6edf3;min-height:100vh}
+    a{color:#388bfd;text-decoration:none}a:hover{text-decoration:underline}
+    .top-nav{background:#010409;border-bottom:1px solid #21262d;padding:0 40px;
+             display:flex;align-items:center;overflow-x:auto}
+    .top-nav a,.top-nav span{display:inline-block;padding:10px 16px;font-size:0.82rem;
+                              white-space:nowrap;border-bottom:2px solid transparent;transition:color .2s}
+    .top-nav a{color:#8b949e}
+    .top-nav a:hover{color:#f0f6fc;text-decoration:none}
+    .top-nav a.active{color:#f0f6fc;border-bottom-color:#388bfd}
+    .top-nav a.home{color:#f0f6fc;font-weight:700;margin-right:4px;
+                    border-right:1px solid #21262d;padding-right:20px}
+    .top-nav span{color:#484f58;cursor:default}
+    header{background:#161b22;border-bottom:1px solid #30363d;padding:24px 40px}
+    header h1{font-size:1.6rem;font-weight:700;color:#f0f6fc}
+    header p{color:#8b949e;font-size:0.88rem;margin-top:5px}
+    main{padding:40px;max-width:1600px;margin:0 auto}
+    .notice{background:#161b22;border:1px solid #f97316;border-radius:8px;
+            padding:16px 20px;margin-bottom:32px;font-size:0.85rem;color:#fdba74;line-height:1.6}
+    .notice strong{color:#fb923c;display:block;margin-bottom:4px;font-size:0.9rem}
+    .legend-key{background:#161b22;border:1px solid #30363d;border-radius:8px;
+                padding:16px 20px;margin-bottom:32px}
+    .legend-key h3{font-size:0.85rem;color:#8b949e;font-weight:600;
+                   text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px}
+    .legend-grid{display:flex;flex-wrap:wrap;gap:8px 24px}
+    .legend-item{font-size:0.82rem;color:#8b949e;display:flex;align-items:center;gap:6px}
+    .legend-item code{background:#0d1117;border:1px solid #30363d;border-radius:4px;
+                      padding:1px 6px;font-size:0.78rem;color:#e6edf3;font-weight:700}
+    .sh{display:flex;align-items:baseline;gap:12px;margin:0 0 20px}
+    .sh h2{font-size:1.1rem;font-weight:600;color:#f0f6fc}
+    .sh p{color:#8b949e;font-size:0.82rem}
+    .badge{font-size:0.72rem;padding:2px 10px;border-radius:12px;font-weight:600;white-space:nowrap}
+    .badge.print{background:#238636;color:#fff}
+    .badge.buy{background:#9a3412;color:#fff}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+    .card{background:#161b22;border:1px solid #30363d;border-radius:8px;
+          overflow:hidden;transition:border-color .2s,transform .2s}
+    .card:hover{border-color:#388bfd;transform:translateY(-2px)}
+    .card img{width:100%;aspect-ratio:1/1;object-fit:contain;
+              background:#0d1117;padding:8px;display:block}
+    .card .no-img{width:100%;aspect-ratio:1/1;background:#0d1117;
+                  display:flex;align-items:center;justify-content:center;
+                  color:#484f58;font-size:0.75rem}
+    .card .lbl{padding:9px 11px;font-size:0.76rem;color:#8b949e;
+               border-top:1px solid #30363d;line-height:1.4;word-break:break-word}
+    .card .lbl strong{display:block;color:#e6edf3;font-size:0.8rem;margin-bottom:3px}
+    .card .lbl .note{font-size:0.72rem;color:#6e7681;margin-top:4px;line-height:1.4}
+    .hero{margin-bottom:32px;border-radius:10px;overflow:hidden;border:1px solid #30363d;max-width:860px}
+    .hero img{width:100%;display:block}
+    .hero-cap{text-align:center;color:#484f58;font-size:0.78rem;margin-top:8px}
+    .card.group-card{border-color:#388bfd;cursor:default}
+    .card.group-card .lbl strong{color:#388bfd;font-size:0.85rem}
+    .group-block{margin-bottom:48px}
+    .divider{border:none;border-top:1px solid #21262d;margin:48px 0 0}
+    footer{text-align:center;padding:40px;color:#484f58;font-size:0.78rem;
+           border-top:1px solid #21262d;margin-top:60px}
+  </style>
+</head>
+<body>
+<nav class="top-nav">
+  <a href="../index.html" class="home">&#x1F916; Rover</a>
+  <a href="ws.html" class="active">Wheel &amp; Suspension</a>
+  <a href="../body/body.html">Body</a>
+  <a href="../camera/camera.html">Camera</a>
+  <a href="../arm/arm.html">Arm</a>
+  <span>Sensors</span>
+  <span>Solar</span>
+  <span>Other Body Parts</span>
+</nav>
+<header>
+  <h1>&#x1F916; Rover Parts Catalog</h1>
+  <p>Wheel &amp; Suspension System &mdash; 41 printable parts</p>
+</header>
+<main>
+
+  <div class="hero" style="margin-left:auto;margin-right:auto">
+    <img src="../other/ws_assembly.png" alt="Wheel and Suspension System assembled">
+    <p class="hero-cap">Wheel &amp; Suspension System &mdash; assembled view</p>
+  </div>
+
+  <div class="notice">
+    <strong>&#x26A0;&#xFE0F; Disclaimer</strong>
+    Some parts may be duplicates. Because these parts have not yet been printed and verified,
+    each is listed separately. This list will be updated once physical prints are confirmed.
+  </div>
+
+  <div class="legend-key">
+    <h3>Naming Convention</h3>
+    <div class="legend-grid">
+      <div class="legend-item"><code>SC</code> Suspension Connector</div>
+      <div class="legend-item"><code>T</code> Tube</div>
+      <div class="legend-item"><code>SBW</code> Springs, Bolts &amp; Washers</div>
+      <div class="legend-item"><code>WA</code> Wheel Assembly</div>
+      <div class="legend-item"><code>MBL</code> Main Body Linkage</div>
+      <div class="legend-item"><code>L</code> Left</div>
+      <div class="legend-item"><code>R</code> Right</div>
+      <div class="legend-item"><code>F</code> Front</div>
+      <div class="legend-item"><code>M</code> Middle</div>
+      <div class="legend-item"><code>RR</code> Right Rear</div>
+      <div class="legend-item"><code>LR</code> Left Rear</div>
+      <div class="legend-item"><code>RM</code> Right Middle</div>
+      <div class="legend-item"><code>LM</code> Left Middle</div>
+    </div>
+  </div>
+
+  <!-- ===== CONNECTORS GROUP ===== -->
+  <div class="group-block">
+    <div class="sh"><h2>&#x1F50C; Connectors (SC)</h2><span class="badge print">10 parts</span></div>
+    <div class="grid">
+      <div class="card group-card">
+        <img src="../other/connectors_assembly.png" alt="Connectors group" loading="lazy">
+        <div class="lbl"><strong>Connectors &mdash; Group</strong></div>
+      </div>
+      <div class="card">
+        <img src="SC LM Axel to Suspension.png" alt="SC LM Axel to Suspension" loading="lazy">
+        <div class="lbl"><strong>SC LM Axel to Suspension</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="SC RM Axel to Suspension.png" alt="SC RM Axel to Suspension" loading="lazy">
+        <div class="lbl"><strong>SC RM Axel to Suspension</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="SC Rear Servo Mount.png" alt="SC Rear Servo Mount" loading="lazy">
+        <div class="lbl"><strong>SC Rear Servo Mount</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="SC RR Inner Connector.png" alt="SC RR Inner Connector" loading="lazy">
+        <div class="lbl"><strong>SC RR Inner Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="SC LR Inner Connector.png" alt="SC LR Inner Connector" loading="lazy">
+        <div class="lbl"><strong>SC LR Inner Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="SC Front Servo Mount.png" alt="SC Front Servo Mount" loading="lazy">
+        <div class="lbl"><strong>SC Front Servo Mount</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="SC RR Outer Connector.png" alt="SC RR Outer Connector" loading="lazy">
+        <div class="lbl"><strong>SC RR Outer Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="SC RM Suspension Connector.png" alt="SC RM Suspension Connector" loading="lazy">
+        <div class="lbl"><strong>SC RM Suspension Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="SC LM Suspension Connector.png" alt="SC LM Suspension Connector" loading="lazy">
+        <div class="lbl"><strong>SC LM Suspension Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="SC LR Outer Connector.png" alt="SC LR Outer Connector" loading="lazy">
+        <div class="lbl"><strong>SC LR Outer Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TUBES GROUP ===== -->
+  <div class="group-block">
+    <div class="sh"><h2>&#x1F9F1; Tubes (T)</h2><span class="badge print">4 parts</span></div>
+    <div class="grid">
+      <div class="card group-card">
+        <img src="../other/tubes_assembly.png" alt="Tubes group" loading="lazy">
+        <div class="lbl"><strong>Tubes &mdash; Group</strong></div>
+      </div>
+      <div class="card">
+        <img src="T Front.png" alt="T Front" loading="lazy">
+        <div class="lbl"><strong>T Front</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="T Rear.png" alt="T Rear" loading="lazy">
+        <div class="lbl"><strong>T Rear</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="T Middle to Rear.png" alt="T Middle to Rear" loading="lazy">
+        <div class="lbl"><strong>T Middle to Rear</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="T Middle Wheel.png" alt="T Middle Wheel" loading="lazy">
+        <div class="lbl"><strong>T Middle Wheel</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SBW GROUP ===== -->
+  <div class="group-block">
+    <div class="sh"><h2>&#x1F529; Springs, Bolts &amp; Washers (SBW)</h2><span class="badge print">14 parts</span></div>
+    <div class="grid">
+      <div class="card group-card">
+        <img src="../other/SBW_assembly.png" alt="Springs Bolts Washers group" loading="lazy">
+        <div class="lbl"><strong>SBW &mdash; Group</strong></div>
+      </div>
+      <div class="card">
+        <img src="SBW Front Threaded Connector.png" alt="SBW Front Threaded Connector" loading="lazy">
+        <div class="lbl"><strong>SBW Front Threaded Connector</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="SBW Washer Top.png" alt="SBW Washer Top" loading="lazy">
+        <div class="lbl"><strong>SBW Washer Top</strong> <span style="color:#f0f6fc;font-weight:700">&times;4</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="SBW Suspension Connector Cap.png" alt="SBW Suspension Connector Cap" loading="lazy">
+        <div class="lbl"><strong>SBW Suspension Connector Cap</strong> <span style="color:#f0f6fc;font-weight:700">&times;8</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="SBW Rear Spring.png" alt="SBW Rear Spring" loading="lazy">
+        <div class="lbl"><strong>SBW Rear Spring</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="SBW Front Spring.png" alt="SBW Front Spring" loading="lazy">
+        <div class="lbl"><strong>SBW Front Spring</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="SBW Spring.png" alt="SBW Spring" loading="lazy">
+        <div class="lbl"><strong>SBW Spring</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="SBW Middle Connector Spring.png" alt="SBW Middle Connector Spring" loading="lazy">
+        <div class="lbl"><strong>SBW Middle Connector Spring</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="SBW Rod Collar Middle Wheel.png" alt="SBW Rod Collar Middle Wheel" loading="lazy">
+        <div class="lbl"><strong>SBW Rod Collar Middle Wheel</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="SBW Threaded Tube Mount to Middle Wheel.png" alt="SBW Threaded Tube Mount to Middle Wheel" loading="lazy">
+        <div class="lbl"><strong>SBW Threaded Tube Mount to Middle Wheel</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="SBW Rear Threaded Tube Mount.png" alt="SBW Rear Threaded Tube Mount" loading="lazy">
+        <div class="lbl"><strong>SBW Rear Threaded Tube Mount</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="SBW Rear Rod.png" alt="SBW Rear Rod" loading="lazy">
+        <div class="lbl"><strong>SBW Rear Rod</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="SBW Body to Rear Connector Rod.png" alt="SBW Body to Rear Connector Rod" loading="lazy">
+        <div class="lbl"><strong>SBW Body to Rear Connector Rod</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="SBW Middle Rod.png" alt="SBW Middle Rod" loading="lazy">
+        <div class="lbl"><strong>SBW Middle Rod</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="SBW Front Rod.png" alt="SBW Front Rod" loading="lazy">
+        <div class="lbl"><strong>SBW Front Rod</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== WHEEL ASSEMBLY GROUP ===== -->
+  <div class="group-block">
+    <div class="sh"><h2>&#x1F6DE; Wheel Assembly (WA)</h2><span class="badge print">6 parts</span></div>
+    <div class="grid">
+      <div class="card group-card">
+        <img src="../other/WA_assembly.png" alt="Wheel Assembly group" loading="lazy">
+        <div class="lbl"><strong>WA &mdash; Group</strong></div>
+      </div>
+      <div class="card">
+        <img src="WA Axel.png" alt="WA Axel" loading="lazy">
+        <div class="lbl"><strong>WA Axel</strong> <span style="color:#f0f6fc;font-weight:700">&times;6</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="WA Axel to Servo.png" alt="WA Axel to Servo" loading="lazy">
+        <div class="lbl"><strong>WA Axel to Servo</strong> <span style="color:#f0f6fc;font-weight:700">&times;4</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="WA Rear Servo to Mount.png" alt="WA Rear Servo to Mount" loading="lazy">
+        <div class="lbl"><strong>WA Rear Servo to Mount</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="WA Wheel.png" alt="WA Wheel" loading="lazy">
+        <div class="lbl"><strong>WA Wheel</strong> <span style="color:#f0f6fc;font-weight:700">&times;6</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="WA Rotor.png" alt="WA Rotor" loading="lazy">
+        <div class="lbl"><strong>WA Rotor</strong> <span style="color:#f0f6fc;font-weight:700">&times;6</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="WA Front Servo to Mount.png" alt="WA Front Servo to Mount" loading="lazy">
+        <div class="lbl"><strong>WA Front Servo to Mount</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MAIN BODY LINKAGE GROUP ===== -->
+  <div class="group-block">
+    <div class="sh"><h2>&#x1F517; Main Body Linkage (MBL)</h2><span class="badge print">7 parts</span></div>
+    <div class="grid">
+      <div class="card group-card">
+        <img src="../other/MBL_assembly.png" alt="Main Body Linkage group" loading="lazy">
+        <div class="lbl"><strong>MBL &mdash; Group</strong></div>
+      </div>
+      <div class="card">
+        <img src="MBL Top Side Linkage.png" alt="MBL Top Side Linkage" loading="lazy">
+        <div class="lbl"><strong>MBL Top Side Linkage</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="MBL Linkage to Suspension Connector.png" alt="MBL Linkage to Suspension Connector" loading="lazy">
+        <div class="lbl"><strong>MBL Linkage to Suspension Connector</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="MBL Suspension to Body Connector.png" alt="MBL Suspension to Body Connector" loading="lazy">
+        <div class="lbl"><strong>MBL Suspension to Body Connector</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="MBL Main Body Connector to Suspension Connector.png" alt="MBL Main Body Connector to Suspension Connector" loading="lazy">
+        <div class="lbl"><strong>MBL Main Body Connector to Suspension Connector</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="MBL Top Main Linkage Bracket.png" alt="MBL Top Main Linkage Bracket" loading="lazy">
+        <div class="lbl"><strong>MBL Top Main Linkage Bracket</strong><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="MBL Linkage to Bearing 608RS.png" alt="MBL Linkage to Bearing 608RS" loading="lazy">
+        <div class="lbl"><strong>MBL Linkage to Bearing 608RS</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+      <div class="card">
+        <img src="MBL Bottom Main Linkage.png" alt="MBL Bottom Main Linkage" loading="lazy">
+        <div class="lbl"><strong>MBL Bottom Main Linkage</strong><span class="badge print" style="font-size:0.68rem;margin-left:6px">3D Print</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== COMMON PRINTING OBJECTS ===== -->
+  <div class="group-block">
+    <div class="sh"><h2>&#x1F501; Common Printing Objects</h2><span class="badge print">3 types &times; 4 each</span></div>
+    <p style="color:#8b949e;font-size:0.85rem;margin-bottom:20px;line-height:1.6">
+      These parts are shared across multiple sub-assemblies. Each must be printed&nbsp;<strong style="color:#f0f6fc">4&times;</strong>.
+    </p>
+    <div class="grid">
+      <div class="card">
+        <img src="../other/Servo MG996R Casings.png" alt="Servo MG996R Casings" loading="lazy">
+        <div class="lbl"><strong>Servo MG996R Casings</strong><span class="badge print" style="font-size:0.68rem">3D Print &times;&thinsp;4</span></div>
+      </div>
+      <div class="card">
+        <img src="../other/Servo MG996R Door Panel.png" alt="Servo MG996R Door Panel" loading="lazy">
+        <div class="lbl"><strong>Servo MG996R Door Panel</strong><span class="badge print" style="font-size:0.68rem">3D Print &times;&thinsp;4</span></div>
+      </div>
+      <div class="card">
+        <img src="../other/Servo MG996R Gear.png" alt="Servo MG996R Gear" loading="lazy">
+        <div class="lbl"><strong>Servo MG996R Gear</strong><span class="badge print" style="font-size:0.68rem">3D Print &times;&thinsp;4</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PARTS TO PURCHASE ===== -->
+  <div class="sh"><h2>&#x1F6D2; Parts to Purchase</h2><span class="badge buy">Hardware</span></div>
+  <p style="color:#8b949e;font-size:0.85rem;margin-bottom:20px;line-height:1.6">
+    The following items must be purchased. Order the exact part or a dimensionally and functionally equivalent substitute.
+  </p>
+  <div class="grid" style="margin-bottom:48px">
+    <div class="card buy-card">
+      <img src="../other/JGA25-370 with encoder.jpg" alt="DC Motor JGA25-370" loading="lazy">
+      <div class="lbl"><strong>DC Motor JGA25-370</strong> <span style="color:#f0f6fc;font-weight:700">&times;6</span><span class="badge buy" style="font-size:0.68rem;margin-left:6px">Purchase</span><div class="note">JGA25-370 with encoder &mdash; 6 required for drive wheels</div></div>
+    </div>
+    <div class="card buy-card">
+      <img src="../other/MG996RorDS3218.jpg" alt="MG996R or DS3218 Servo" loading="lazy">
+      <div class="lbl"><strong>MG996R or DS3218 Servo</strong> <span style="color:#f0f6fc;font-weight:700">&times;4</span><span class="badge buy" style="font-size:0.68rem;margin-left:6px">Purchase</span><div class="note">MG996R or DS3218 Pro 20KG 180&deg; digital servo</div></div>
+    </div>
+    <div class="card buy-card">
+      <img src="../other/Ball_Bearing_608ZZ.png" alt="Ball Bearing 608ZZ" loading="lazy">
+      <div class="lbl"><strong>Ball Bearing 608ZZ</strong> <span style="color:#f0f6fc;font-weight:700">&times;4</span><span class="badge buy" style="font-size:0.68rem;margin-left:6px">Purchase</span><div class="note">608ZZ or equivalent &mdash; <strong style="color:#fb923c">recommend 608RS for outdoor use</strong></div></div>
+    </div>
+    <div class="card buy-card">
+      <img src="../other/Servo Bolt.png" alt="Servo Bolt" loading="lazy">
+      <div class="lbl"><strong>Servo Bolt</strong> <span style="color:#f0f6fc;font-weight:700">&times;16</span><span class="badge buy" style="font-size:0.68rem;margin-left:6px">Purchase</span><div class="note">Standard servo mounting bolt</div></div>
+    </div>
+    <div class="card buy-card">
+      <img src="../other/Nut M3 90592A085.png" alt="Nut M3 90592A085" loading="lazy">
+      <div class="lbl"><strong>Nut M3 90592A085</strong> <span style="color:#f0f6fc;font-weight:700">&times;10</span><span class="badge buy" style="font-size:0.68rem;margin-left:6px">Purchase</span><div class="note">Standard M3 hex nut &mdash; McMaster-Carr 90592A085 or equivalent</div></div>
+    </div>
+    <div class="card buy-card">
+      <img src="../other/Ball_Bearing_6005RS.png" alt="Ball Bearing 6005RS" loading="lazy">
+      <div class="lbl"><strong>Ball Bearing 6005RS</strong> <span style="color:#f0f6fc;font-weight:700">&times;1</span><span class="badge buy" style="font-size:0.68rem;margin-left:6px">Purchase</span><div class="note">SKF 6005RS or equivalent &mdash; main linkage arm pivot</div></div>
+    </div>
+  </div>
+
+</main>
+<footer>
+  Rover Parts Catalog &mdash; Wheel &amp; Suspension System &mdash;
+  <a href="../index.html">Home</a> &bull;
+  <a href="../body/body.html">Body</a> &bull;
+  <a href="../camera/camera.html">Camera</a> &bull;
+  <a href="../arm/arm.html">Arm</a>
+</footer>
+</body>
+</html>
