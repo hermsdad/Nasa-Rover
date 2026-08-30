@@ -23,6 +23,10 @@
     header h1{font-size:1.6rem;font-weight:700;color:#f0f6fc}
     header p{color:#8b949e;font-size:0.88rem;margin-top:5px}
     main{padding:40px;max-width:1600px;margin:0 auto}
+    .hero{margin-bottom:32px;border-radius:10px;overflow:hidden;border:1px solid #30363d;
+          max-width:720px;margin-left:auto;margin-right:auto}
+    .hero img{width:100%;display:block}
+    .hero-cap{text-align:center;color:#484f58;font-size:0.78rem;margin-top:8px}
     .notice{background:#161b22;border:1px solid #f97316;border-radius:8px;
             padding:16px 20px;margin-bottom:32px;font-size:0.85rem;color:#fdba74;line-height:1.6}
     .notice strong{color:#fb923c;display:block;margin-bottom:4px;font-size:0.9rem}
@@ -31,18 +35,19 @@
     .sh p{color:#8b949e;font-size:0.82rem}
     .badge{font-size:0.72rem;padding:2px 10px;border-radius:12px;font-weight:600;white-space:nowrap}
     .badge.print{background:#238636;color:#fff}
+    .badge.buy{background:#9a3412;color:#fff}
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
     .card{background:#161b22;border:1px solid #30363d;border-radius:8px;
           overflow:hidden;transition:border-color .2s,transform .2s}
     .card:hover{border-color:#388bfd;transform:translateY(-2px)}
+    .card.buy-card:hover{border-color:#f97316}
     .card img{width:100%;aspect-ratio:1/1;object-fit:contain;
               background:#0d1117;padding:8px;display:block}
-    .card .no-img{width:100%;aspect-ratio:1/1;background:#0d1117;
-                  display:flex;align-items:center;justify-content:center;
-                  color:#484f58;font-size:0.75rem}
     .card .lbl{padding:9px 11px;font-size:0.76rem;color:#8b949e;
                border-top:1px solid #30363d;line-height:1.4;word-break:break-word}
     .card .lbl strong{display:block;color:#e6edf3;font-size:0.8rem;margin-bottom:3px}
+    .card .lbl .note{font-size:0.72rem;color:#6e7681;margin-top:4px;line-height:1.4}
+    .group-block{margin-bottom:48px}
     footer{text-align:center;padding:40px;color:#484f58;font-size:0.78rem;
            border-top:1px solid #21262d;margin-top:60px}
   </style>
@@ -63,136 +68,98 @@
   <p>Camera System &mdash; all printable parts</p>
 </header>
 <main>
-  <!-- Hero assembly image -->
-  <div style="margin-bottom:32px;text-align:center">
-    <img src="../other/camera_assembly.png" alt="Camera System assembled"
-         style="width:25%;border-radius:10px;border:1px solid #30363d;display:inline-block">
-    <p style="text-align:center;color:#484f58;font-size:0.78rem;margin-top:8px">
-      Camera System &mdash; assembled view
-    </p>
+  <div class="hero">
+    <img src="../other/camera_assembly.png" alt="Camera System assembled">
+    <p class="hero-cap">Camera System &mdash; assembled view</p>
   </div>
   <div class="notice">
     <strong>&#x26A0;&#xFE0F; Disclaimer</strong>
     Some parts may be duplicates. Because these parts have not yet been printed and verified,
     each is listed separately. This list will be updated once physical prints are confirmed.
   </div>
-  <div class="sh">
-    <h2>&#x1F5A8; Printable Parts</h2>
-    <span class="badge print">26 parts</span>
-    <p>Print these on your printer of choice. PETG or better recommended.</p>
+
+  <!-- ===== PRINTABLE PARTS ===== -->
+  <div class="group-block">
+    <div class="sh">
+      <h2>&#x1F5A8; Printable Parts</h2>
+      <span class="badge print">26 parts</span>
+      <p>Print these on your printer of choice. PETG or better recommended.</p>
+    </div>
+    <div class="grid">
+      <div class="card"><img src="Base_Arm.png" alt="Base Arm" loading="lazy"><div class="lbl"><strong>Base Arm</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Base_Connector_Back_Piece.png" alt="Base Connector Back Piece" loading="lazy"><div class="lbl"><strong>Base Connector Back Piece</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Base_Connector_to_Shaft.png" alt="Base Connector to Shaft" loading="lazy"><div class="lbl"><strong>Base Connector to Shaft</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Base_to_Arm_Connector.png" alt="Base to Arm Connector" loading="lazy"><div class="lbl"><strong>Base to Arm Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Camera_Platform_Main_Body.png" alt="Camera Platform Main Body" loading="lazy"><div class="lbl"><strong>Camera Platform Main Body</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Camera_Platform_Top.png" alt="Camera Platform Top" loading="lazy"><div class="lbl"><strong>Camera Platform Top</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Camera_Tilt_Head_Platform.png" alt="Camera Tilt Head Platform" loading="lazy"><div class="lbl"><strong>Camera Tilt Head Platform</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="ESP_Camera_Mount.png" alt="ESP Camera Mount" loading="lazy"><div class="lbl"><strong>ESP Camera Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Grip_Left.png" alt="Grip Left" loading="lazy"><div class="lbl"><strong>Grip Left</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Grip_Right.png" alt="Grip Right" loading="lazy"><div class="lbl"><strong>Grip Right</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Grip_Shaft_Mount.png" alt="Grip Shaft Mount" loading="lazy"><div class="lbl"><strong>Grip Shaft Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Main_Head_Body.png" alt="Main Head Body" loading="lazy"><div class="lbl"><strong>Main Head Body</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Main_Head_to_Shaft_Servo_Gear_Connector.png" alt="Main Head to Shaft Servo Gear Connector" loading="lazy"><div class="lbl"><strong>Main Head to Shaft Servo Gear Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Main_Shaft.png" alt="Main Shaft" loading="lazy"><div class="lbl"><strong>Main Shaft</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Main_Shaft_Base_Pivot.png" alt="Main Shaft Base Pivot" loading="lazy"><div class="lbl"><strong>Main Shaft Base Pivot</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Main_Shaft_to_Main_Head_Connector.png" alt="Main Shaft to Main Head Connector" loading="lazy"><div class="lbl"><strong>Main Shaft to Main Head Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Servo_Box_Cover.png" alt="Servo Box Cover" loading="lazy"><div class="lbl"><strong>Servo Box Cover</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Servo_Box_Cover_1.png" alt="Servo Box Cover 1" loading="lazy"><div class="lbl"><strong>Servo Box Cover 1</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Servo_Case.png" alt="Servo Case" loading="lazy"><div class="lbl"><strong>Servo Case</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Servo_Gear.png" alt="Servo Gear" loading="lazy"><div class="lbl"><strong>Servo Gear</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Servo_Gear_1.png" alt="Servo Gear 1" loading="lazy"><div class="lbl"><strong>Servo Gear 1</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Servo_Gear_Connector.png" alt="Servo Gear Connector" loading="lazy"><div class="lbl"><strong>Servo Gear Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Shaft_Bottom_Connector.png" alt="Shaft Bottom Connector" loading="lazy"><div class="lbl"><strong>Shaft Bottom Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Top_Main_Shaft_Connector_Part_B.png" alt="Top Main Shaft Connector Part B" loading="lazy"><div class="lbl"><strong>Top Main Shaft Connector Part B</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Top_Shaft_Connector_Part_A.png" alt="Top Shaft Connector Part A" loading="lazy"><div class="lbl"><strong>Top Shaft Connector Part A</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Top_Shaft_to_Main_Head_Connector.png" alt="Top Shaft to Main Head Connector" loading="lazy"><div class="lbl"><strong>Top Shaft to Main Head Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+    </div>
   </div>
-  <div class="grid">
-    <div class="card">
-      <img src="Base_Arm.png" alt="Base Arm" loading="lazy">
-      <div class="lbl"><strong>Base Arm</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+
+  <!-- ===== COMMON PRINTING OBJECTS ===== -->
+  <div class="group-block">
+    <div class="sh"><h2>&#x1F501; Common Printing Objects</h2><span class="badge print">3 types &times; 2 each</span></div>
+    <p style="color:#8b949e;font-size:0.85rem;margin-bottom:20px;line-height:1.6">
+      These parts are shared across the camera sub-assemblies. Each must be printed&nbsp;<strong style="color:#f0f6fc">2&times;</strong>.
+    </p>
+    <div class="grid">
+      <div class="card">
+        <img src="../other/Servo MG996R Casings.png" alt="Servo MG996R Casings" loading="lazy">
+        <div class="lbl"><strong>Servo MG996R Casings</strong><span class="badge print" style="font-size:0.68rem">3D Print &times;&thinsp;2</span></div>
+      </div>
+      <div class="card">
+        <img src="../other/Servo MG996R Door Panel.png" alt="Servo MG996R Door Panel" loading="lazy">
+        <div class="lbl"><strong>Servo MG996R Door Panel</strong><span class="badge print" style="font-size:0.68rem">3D Print &times;&thinsp;2</span></div>
+      </div>
+      <div class="card">
+        <img src="../other/Servo MG996R Gear.png" alt="Servo MG996R Gear" loading="lazy">
+        <div class="lbl"><strong>Servo MG996R Gear</strong><span class="badge print" style="font-size:0.68rem">3D Print &times;&thinsp;2</span></div>
+      </div>
     </div>
-    <div class="card">
-      <img src="Base_Connector_Back_Piece.png" alt="Base Connector Back Piece" loading="lazy">
-      <div class="lbl"><strong>Base Connector Back Piece</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+  </div>
+
+  <!-- ===== PARTS TO PURCHASE ===== -->
+  <div class="sh"><h2>&#x1F6D2; Parts to Purchase</h2><span class="badge buy">Hardware</span></div>
+  <p style="color:#8b949e;font-size:0.85rem;margin-bottom:20px;line-height:1.6">
+    The following items must be purchased. Order the exact part or a dimensionally equivalent substitute.
+  </p>
+  <div class="grid" style="margin-bottom:48px">
+    <div class="card buy-card">
+      <img src="../other/MG996RorDS3218.jpg" alt="MG996R or DS3218 Servo" loading="lazy">
+      <div class="lbl"><strong>MG996R or DS3218 Servo</strong> <span style="color:#f0f6fc;font-weight:700">&times;2</span><span class="badge buy" style="font-size:0.68rem;margin-left:6px">Purchase</span><div class="note">MG996R or DS3218 Pro 20KG 180&deg; digital servo</div></div>
     </div>
-    <div class="card">
-      <img src="Base_Connector_to_Shaft.png" alt="Base Connector to Shaft" loading="lazy">
-      <div class="lbl"><strong>Base Connector to Shaft</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="Base_to_Arm_Connector.png" alt="Base to Arm Connector" loading="lazy">
-      <div class="lbl"><strong>Base to Arm Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="Camera_Platform_Main_Body.png" alt="Camera Platform Main Body" loading="lazy">
-      <div class="lbl"><strong>Camera Platform Main Body</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="Camera_Platform_Top.png" alt="Camera Platform Top" loading="lazy">
-      <div class="lbl"><strong>Camera Platform Top</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="Camera_Tilt_Head_Platform.png" alt="Camera Tilt Head Platform" loading="lazy">
-      <div class="lbl"><strong>Camera Tilt Head Platform</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="ESP_Camera_Mount.png" alt="ESP Camera Mount" loading="lazy">
-      <div class="lbl"><strong>ESP Camera Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="Grip_Left.png" alt="Grip Left" loading="lazy">
-      <div class="lbl"><strong>Grip Left</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="Grip_Right.png" alt="Grip Right" loading="lazy">
-      <div class="lbl"><strong>Grip Right</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="Grip_Shaft_Mount.png" alt="Grip Shaft Mount" loading="lazy">
-      <div class="lbl"><strong>Grip Shaft Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="Main_Head_Body.png" alt="Main Head Body" loading="lazy">
-      <div class="lbl"><strong>Main Head Body</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="Main_Head_to_Shaft_Servo_Gear_Connector.png" alt="Main Head to Shaft Servo Gear Connector" loading="lazy">
-      <div class="lbl"><strong>Main Head to Shaft Servo Gear Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="Main_Shaft.png" alt="Main Shaft" loading="lazy">
-      <div class="lbl"><strong>Main Shaft</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="Main_Shaft_Base_Pivot.png" alt="Main Shaft Base Pivot" loading="lazy">
-      <div class="lbl"><strong>Main Shaft Base Pivot</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="Main_Shaft_to_Main_Head_Connector.png" alt="Main Shaft to Main Head Connector" loading="lazy">
-      <div class="lbl"><strong>Main Shaft to Main Head Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="Servo_Box_Cover.png" alt="Servo Box Cover" loading="lazy">
-      <div class="lbl"><strong>Servo Box Cover</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="Servo_Box_Cover_1.png" alt="Servo Box Cover 1" loading="lazy">
-      <div class="lbl"><strong>Servo Box Cover 1</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="Servo_Case.png" alt="Servo Case" loading="lazy">
-      <div class="lbl"><strong>Servo Case</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="Servo_Gear.png" alt="Servo Gear" loading="lazy">
-      <div class="lbl"><strong>Servo Gear</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="Servo_Gear_1.png" alt="Servo Gear 1" loading="lazy">
-      <div class="lbl"><strong>Servo Gear 1</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="Servo_Gear_Connector.png" alt="Servo Gear Connector" loading="lazy">
-      <div class="lbl"><strong>Servo Gear Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="Shaft_Bottom_Connector.png" alt="Shaft Bottom Connector" loading="lazy">
-      <div class="lbl"><strong>Shaft Bottom Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="Top_Main_Shaft_Connector_Part_B.png" alt="Top Main Shaft Connector Part B" loading="lazy">
-      <div class="lbl"><strong>Top Main Shaft Connector Part B</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="Top_Shaft_Connector_Part_A.png" alt="Top Shaft Connector Part A" loading="lazy">
-      <div class="lbl"><strong>Top Shaft Connector Part A</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
-    </div>
-    <div class="card">
-      <img src="Top_Shaft_to_Main_Head_Connector.png" alt="Top Shaft to Main Head Connector" loading="lazy">
-      <div class="lbl"><strong>Top Shaft to Main Head Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div>
+    <div class="card buy-card">
+      <img src="../other/Servo Bolt.png" alt="Servo Bolt" loading="lazy">
+      <div class="lbl"><strong>Servo Bolt</strong> <span style="color:#f0f6fc;font-weight:700">&times;8</span><span class="badge buy" style="font-size:0.68rem;margin-left:6px">Purchase</span><div class="note">Standard servo mounting bolt &mdash; 8 required</div></div>
     </div>
   </div>
 </main>
 <footer>
   Rover Parts Catalog &mdash; Camera System &mdash;
+  <a href="../index.html">Home</a> &bull;
   <a href="../ws/ws.html">Wheel &amp; Suspension</a> &bull;
   <a href="../body/body.html">Body</a> &bull;
-  Camera &bull; Arm &bull; Sensors &bull; Solar
+  Camera &bull;
+  <a href="../arm/arm.html">Arm</a>
 </footer>
 </body>
 </html>
