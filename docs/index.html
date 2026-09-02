@@ -68,13 +68,13 @@
   <a href="index.html" class="home active">&#x1F916; Rover</a>
   <a href="ws/ws.html">Wheel &amp; Suspension</a>
   <a href="body/body.html">Body</a>
-  <a href="camera/camera.html">Camera</a><a href="arm/arm.html">Arm</a><span>Sensors</span><span>Solar</span><span>Other Body Parts</span>
+  <a href="camera/camera.html">Camera</a><a href="arm/arm.html">Arm</a><a href="sbp/sbp.html">Other Body Parts</a>
 </nav>
 <header>
   <h1>NASA Inspired Rover <span class="wip-badge">Work in Progress</span></h1>
-  <p>An open source, 3D printable 6-wheel rocker-bogie rover inspired by NASA&rsquo;s Perseverance.
-     All printable parts are available as 3MF files.
-     This project is actively being developed &mdash; parts, docs, and sections will be added as the build progresses.</p>
+  <p style="color:#8b949e;font-size:0.88rem;line-height:1.7;margin-top:12px">An open source, 3D printable 6-wheel rocker-bogie rover inspired by NASA&rsquo;s Perseverance. All printable parts are available as 3MF files in the main GitHub repository. This project is focused specifically on being able to print the Rover. I did not design this rover. I am merely trying to make it easier to print. The original rover can be found <a href="https://github.com/ahil01/Nasa-Rover" target="_blank">here</a>.</p>
+  <p style="color:#8b949e;font-size:0.88rem;line-height:1.7;margin-top:12px">I am slowly going through each component. The grand majority appear ready to print. However, I have found that some need repairs or alterations. Some have broken object files and need major object repair. Those require more work. Other&rsquo;s need alterations so they work as intended. For now my main focus is on getting the wheels &amp; suspension as clean as possible. If you want to jump in and help please reach out. I am an absolute beginner and could definitely use the help.</p>
+  <p style="color:#8b949e;font-size:0.88rem;line-height:1.7;margin-top:12px">This guide is here to provide the basics to be able to print and build the rover and the basics for the types of motors and servos that will fit. This will not cover wiring or needed control board and programming. In fact, I could use any help or suggestions you have in this regard! My plan is to build the basics, wheels and main body, and slowly start building out. I&rsquo;ll be learning and tackling the wiring and programming as I go along with my 8 year old son.</p>
   <a class="gh-btn" href="https://github.com/hermsdad/Nasa-Rover/tree/main" target="_blank">&#x2B07; View on GitHub</a>
 </header>
 <main>
@@ -94,45 +94,33 @@
     <a class="sec-card" href="ws/ws.html">
       <div class="sec-icon">&#x2699;&#xFE0F;</div>
       <div class="sec-title">Wheel &amp; Suspension</div>
-      <div class="sec-desc">6-wheel rocker-bogie suspension, drive motors, s, linkage arms and all mounting hardware.</div>
-      <span class="sec-count">113 printable parts</span>
+      <div class="sec-desc">6-wheel rocker-bogie suspension with internal wiring.</div>
+      <span class="sec-count">103 printable parts</span>
     </a>
     <a class="sec-card" href="body/body.html">
       <div class="sec-icon">&#x1F4E6;</div>
       <div class="sec-title">Body</div>
-      <div class="sec-desc">Main rover body panels, connectors and internal mounts.</div>
+      <div class="sec-desc">Main rover body panels.</div>
       <span class="sec-count">7 printable parts</span>
     </a>
     <a class="sec-card" href="camera/camera.html">
       <div class="sec-icon">&#x1F4F7;</div>
       <div class="sec-title">Camera</div>
-      <div class="sec-desc">Camera head, tilt platform, servo mounts, grips and all camera system parts.</div>
+      <div class="sec-desc">Camera mount, tilt, and rotation system.</div>
       <span class="sec-count">26 printable parts</span>
     </a>
     <a class="sec-card" href="arm/arm.html">
       <div class="sec-icon">&#x1F9BE;</div>
       <div class="sec-title">Arm</div>
-      <div class="sec-desc">Robotic arm assembly &mdash; pincer, rotator, mount base and all arm system parts.</div>
+      <div class="sec-desc">5-axis arm with grip.</div>
       <span class="sec-count">28 printable parts</span>
     </a>
-    <div class="sec-card placeholder">
-      <div class="sec-icon">&#x1F4E1;</div>
-      <div class="sec-title">Sensors</div>
-      <div class="sec-desc">Sensor mounts and housings. Coming soon.</div>
-      <span class="sec-count-tbd">Coming soon</span>
-    </div>
-    <div class="sec-card placeholder">
-      <div class="sec-icon">&#x2600;&#xFE0F;</div>
-      <div class="sec-title">Solar</div>
-      <div class="sec-desc">Solar panel mounts and power system parts. Coming soon.</div>
-      <span class="sec-count-tbd">Coming soon</span>
-    </div>
-    <div class="sec-card placeholder">
+    <a class="sec-card" href="sbp/sbp.html">
       <div class="sec-icon">&#x1F527;</div>
       <div class="sec-title">Other Body Parts</div>
-      <div class="sec-desc">Additional body components. Coming soon.</div>
-      <span class="sec-count-tbd">Coming soon</span>
-    </div>
+      <div class="sec-desc">Tank, antenna, mirror, cooling, solar and side mount parts.</div>
+      <span class="sec-count">47 printable parts</span>
+    </a>
   </div>
   <div class="sh">
     <h2>&#x1F6D2; Parts to Purchase</h2>
@@ -145,16 +133,17 @@
   <table class="spec-table">
     <thead><tr><th>Part</th><th>Qty</th><th>Specification / Notes</th><th>Section</th></tr></thead>
     <tbody>
-      <tr><td><strong>DC Drive Motors</strong></td><td class="qty">6&times;</td><td class="src">JGA25-370 with encoder. </td><td class="src"><a href="ws/ws.html">Wheel &amp; Suspension</a></td></tr>
-      <tr><td><strong> Servos</strong></td><td class="qty">10&times;</td><td class="src">MG996R or DS3218 Pro 20KG 180-Degree Digital Servo. I'm using the MG996R for the camera and arm servo's but the DS3218 for the wheels. May switch up or upgrade.</td><td class="src"><a href="ws/ws.html">Wheel &amp; Suspension</a></td></tr>
-      <tr><td><strong>Motor Driver</strong></td><td class="qty">1&times;</td><td class="src">MD40 4-Channel Closed-Loop I2C Motor Driver Board for wheels and PCA9685 for all other servos</td><td class="src"><a href="ws/ws.html">Wheel &amp; Suspension</a></td></tr>
-      <tr><td><strong>Ball Bearing 608</strong></td><td class="qty">5&times;</td><td class="src">608ZZ or equivalent &mdash; <strong style='color:#fb923c'>recommend 608RS for outdoor use</strong></td><td class="src"><a href="ws/ws.html">Wheel &amp; Suspension</a></td></tr>
-      <tr><td><strong>Ball Bearing 6005RS</strong></td><td class="qty">&mdash;</td><td class="src">6005RS or equivalent &mdash; main linkage arm pivots</td><td class="src"><a href="ws/ws.html">Wheel &amp; Suspension</a></td></tr>
-      <tr><td><strong>Servo Bolt</strong></td><td class="qty">&mdash;</td><td class="src">Standard servo mounting bolt &mdash; check servo kit for qty</td><td class="src"><a href="ws/ws.html">Wheel &amp; Suspension</a></td></tr>
-      <tr><td><strong>M3 Nuts</strong></td><td class="qty">&mdash;</td><td class="src">Standard M3 hex nuts (90592A085 or equivalent)</td><td class="src"><a href="ws/ws.html">Wheel &amp; Suspension</a></td></tr>
+      <tr><td><strong>DC Drive Motors</strong></td><td class="qty">6&times;</td><td class="src">JGA25-370 with encoder, GA25-370, or similar 25mm x 69mm motor.</td><td class="src"><a href="ws/ws.html">Wheel &amp; Suspension</a></td></tr>
+      <tr><td><strong>Wheel Mounting Hub</strong></td><td class="qty">6&times;</td><td class="src">Wheel Motors may require HD Pololu universal aluminum mounting hub for 4mm shaft m3 holes.</td><td class="src"><a href="ws/ws.html">Wheel &amp; Suspension</a></td></tr>
+      <tr><td><strong>Servos</strong></td><td class="qty">10&times;</td><td class="src">MG996R or DS3218 Pro 20KG 180-Degree Digital Servo. I'm using the MG996R for the camera and arm servo's but the DS3218 for the wheels. May switch up or upgrade.</td><td class="src"><a href="ws/ws.html">Wheel &amp; Suspension</a>, <a href="arm/arm.html">Arm</a>, <a href="camera/camera.html">Camera</a>, <a href="sbp/sbp.html#mirror">Mirror</a></td></tr>
+      <tr><td><strong>Servo Horn</strong></td><td class="qty">10&times;</td><td class="src">Not all servos may require generic 25T Disc Servo Horns so quantity may be off.</td><td class="src"><a href="ws/ws.html">Wheel &amp; Suspension</a>, <a href="arm/arm.html">Arm</a>, <a href="camera/camera.html">Camera</a>, <a href="sbp/sbp.html#mirror">Mirror</a></td></tr>
+      <tr><td><strong>Servo Bolts</strong></td><td class="qty">40&times;</td><td class="src">Standard servo mounting bolt &mdash; This is likely an M3 bolt/screw but unsure until build time.</td><td class="src"><a href="ws/ws.html">Wheel &amp; Suspension</a>, <a href="arm/arm.html">Arm</a>, <a href="camera/camera.html">Camera</a>, <a href="sbp/sbp.html#mirror">Mirror</a></td></tr>
+      <tr><td><strong>Ball Bearing 608RS</strong></td><td class="qty">5&times;</td><td class="src">608RS or equivalent.</td><td class="src"><a href="ws/ws.html">Wheel &amp; Suspension</a>, <a href="camera/camera.html">Camera</a></td></tr>
+      <tr><td><strong>Ball Bearing 6005RS</strong></td><td class="qty">3&times;</td><td class="src">6005RS or equivalent &mdash; main linkage arm pivots.</td><td class="src"><a href="ws/ws.html">Wheel &amp; Suspension</a></td></tr>
+      <tr><td><strong>ESP32-Cam</strong></td><td class="qty">1&times;</td><td class="src">Generic ESPCam mount so lots of choices out there.</td><td class="src"><a href="camera/camera.html">Camera</a></td></tr>
+      <tr><td><strong>M3 Nuts</strong></td><td class="qty">12&times;</td><td class="src">Standard M3 hex nuts (90592A085 or equivalent).</td><td class="src"><a href="ws/ws.html">Wheel &amp; Suspension</a></td></tr>
     </tbody>
   </table>
-  <p class="more-note">&#x2139;&#xFE0F; More purchased parts will be added as Camera, Arm, Sensors and Solar sections are completed.</p>
 </main>
 <footer>
   NASA Inspired Rover &mdash; Open Source 3D Printable Project<br>
