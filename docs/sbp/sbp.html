@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Rover Parts Catalog &mdash; Other Body Parts</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d1117;color:#e6edf3;min-height:100vh}
+    a{color:#388bfd;text-decoration:none}a:hover{text-decoration:underline}
+    .top-nav{background:#010409;border-bottom:1px solid #21262d;padding:0 40px;display:flex;align-items:center;overflow-x:auto}
+    .top-nav a,.top-nav span{display:inline-block;padding:10px 16px;font-size:0.82rem;white-space:nowrap;border-bottom:2px solid transparent;transition:color .2s}
+    .top-nav a{color:#8b949e}.top-nav a:hover{color:#f0f6fc;text-decoration:none}
+    .top-nav a.active{color:#f0f6fc;border-bottom-color:#388bfd}
+    .top-nav a.home{color:#f0f6fc;font-weight:700;margin-right:4px;border-right:1px solid #21262d;padding-right:20px}
+    .top-nav span{color:#484f58;cursor:default}
+    header{background:#161b22;border-bottom:1px solid #30363d;padding:24px 40px}
+    header h1{font-size:1.6rem;font-weight:700;color:#f0f6fc}
+    header p{color:#8b949e;font-size:0.88rem;margin-top:5px}
+    main{padding:40px;max-width:1600px;margin:0 auto}
+    .hero{margin-bottom:32px;border-radius:10px;overflow:hidden;border:1px solid #30363d;max-width:720px}
+    .hero img{width:100%;display:block}
+    .hero-cap{text-align:center;color:#484f58;font-size:0.78rem;margin-top:8px}
+    .notice{background:#161b22;border:1px solid #f97316;border-radius:8px;padding:16px 20px;margin-bottom:32px;font-size:0.85rem;color:#fdba74;line-height:1.6}
+    .notice strong{color:#fb923c;display:block;margin-bottom:4px;font-size:0.9rem}
+    .sh{display:flex;align-items:baseline;gap:12px;margin:0 0 20px}
+    .sh h2{font-size:1.1rem;font-weight:600;color:#f0f6fc}
+    .badge{font-size:0.72rem;padding:2px 10px;border-radius:12px;font-weight:600;white-space:nowrap}
+    .badge.print{background:#238636;color:#fff}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+    .card{background:#161b22;border:1px solid #30363d;border-radius:8px;overflow:hidden;transition:border-color .2s,transform .2s}
+    .card:hover{border-color:#388bfd;transform:translateY(-2px)}
+    .card img{width:100%;aspect-ratio:1/1;object-fit:contain;background:#0d1117;padding:8px;display:block}
+    .card .lbl{padding:9px 11px;font-size:0.76rem;color:#8b949e;border-top:1px solid #30363d;line-height:1.4;word-break:break-word}
+    .card .lbl strong{display:block;color:#e6edf3;font-size:0.8rem;margin-bottom:3px}
+    .card.hero-card{border-color:#388bfd}
+    .card.hero-card .lbl{color:#388bfd}
+    .badge.buy{background:#9a3412;color:#fff}
+    .card.buy-card{border-color:#9a3412}
+    .card .lbl .note{font-size:0.72rem;color:#6e7681;margin-top:4px;line-height:1.4}
+    .group-block{margin-bottom:48px}
+    footer{text-align:center;padding:40px;color:#484f58;font-size:0.78rem;border-top:1px solid #21262d;margin-top:60px}
+  </style>
+</head>
+<body>
+<nav class="top-nav">
+  <a href="../index.html" class="home">&#x1F916; Rover</a>
+  <a href="../ws/ws.html">Wheel &amp; Suspension</a>
+  <a href="../body/body.html">Body</a>
+  <a href="../camera/camera.html">Camera</a>
+  <a href="../arm/arm.html">Arm</a>
+  <a href="sbp.html" class="active">Other Body Parts</a>
+</nav>
+<header>
+  <h1>&#x1F916; Rover Parts Catalog</h1>
+  <p>Other Body Parts &mdash; all printable parts</p>
+</header>
+<main>
+  <div class="hero" style="margin-left:auto;margin-right:auto">
+    <img src="../other/sbp_assembly.png" alt="Other Body Parts assembled">
+    <p class="hero-cap">Other Body Parts &mdash; assembled view</p>
+  </div>
+
+  <div class="notice">
+    <strong>&#x26A0;&#xFE0F; Disclaimer</strong>
+    Some parts may be duplicates or subject to change once physical prints are verified.
+    Parts marked &times;2 or &times;4 are the same part printed multiple times.
+  </div>
+
+  <div class="group-block">
+    <div class="sh"><h2>&#x1F4A7; Tank</h2><span class="badge print">7 parts</span></div>
+    <div class="grid">
+      <div class="card hero-card"><img src="../other/tank_assembly.png" alt="Tank assembled" loading="lazy"><div class="lbl"><strong>Tank &mdash; assembled</strong></div></div>
+      <div class="card"><img src="Tank Bottom.png" alt="Tank Bottom" loading="lazy"><div class="lbl"><strong>Tank Bottom</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Tank Leg B.png" alt="Tank Leg B" loading="lazy"><div class="lbl"><strong>Tank Leg B</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Tank Bottom Ring.png" alt="Tank Bottom Ring" loading="lazy"><div class="lbl"><strong>Tank Bottom Ring</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Tank Main Body.png" alt="Tank Main Body" loading="lazy"><div class="lbl"><strong>Tank Main Body</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Tank Leg.png" alt="Tank Leg" loading="lazy"><div class="lbl"><strong>Tank Leg</strong><span class="badge print" style="font-size:0.68rem">3D Print &times;2</span></div></div>
+      <div class="card"><img src="Tank Mount.png" alt="Tank Mount" loading="lazy"><div class="lbl"><strong>Tank Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Tank Body Connector.png" alt="Tank Body Connector" loading="lazy"><div class="lbl"><strong>Tank Body Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+    </div>
+  </div>
+
+  <div class="group-block">
+    <div class="sh"><h2>&#x1F4E1; Antenna</h2><span class="badge print">8 parts</span></div>
+    <div class="grid">
+      <div class="card hero-card"><img src="../other/antenna_assembly.png" alt="Antenna assembled" loading="lazy"><div class="lbl"><strong>Antenna &mdash; assembled</strong></div></div>
+      <div class="card"><img src="AT Big Tip.png" alt="AT Big Tip" loading="lazy"><div class="lbl"><strong>AT Big Tip</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="AT Big Tip Middle.png" alt="AT Big Tip Middle" loading="lazy"><div class="lbl"><strong>AT Big Tip Middle</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="AT Main Base.png" alt="AT Main Base" loading="lazy"><div class="lbl"><strong>AT Main Base</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="AT Double Antenna Base.png" alt="AT Double Antenna Base" loading="lazy"><div class="lbl"><strong>AT Double Antenna Base</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="AT Small Antenna.png" alt="AT Small Antenna" loading="lazy"><div class="lbl"><strong>AT Small Antenna</strong><span class="badge print" style="font-size:0.68rem">3D Print &times;2</span></div></div>
+      <div class="card"><img src="AT Big Antenna Base.png" alt="AT Big Antenna Base" loading="lazy"><div class="lbl"><strong>AT Big Antenna Base</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="AT Big Tip Circle Base.png" alt="AT Big Tip Circle Base" loading="lazy"><div class="lbl"><strong>AT Big Tip Circle Base</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="AT Big Tip Insert.png" alt="AT Big Tip Insert" loading="lazy"><div class="lbl"><strong>AT Big Tip Insert</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+    </div>
+  </div>
+
+  <div class="group-block">
+    <div class="sh"><h2>&#x2744;&#xFE0F; Cooling</h2><span class="badge print">8 parts</span></div>
+    <div class="grid">
+      <div class="card hero-card"><img src="../other/cooling_assembly.png" alt="Cooling assembled" loading="lazy"><div class="lbl"><strong>Cooling &mdash; assembled</strong></div></div>
+      <div class="card"><img src="Cooling Tube A.png" alt="Cooling Tube A" loading="lazy"><div class="lbl"><strong>Cooling Tube A</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Cooling Tube B.png" alt="Cooling Tube B" loading="lazy"><div class="lbl"><strong>Cooling Tube B</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Cooling Tube C.png" alt="Cooling Tube C" loading="lazy"><div class="lbl"><strong>Cooling Tube C</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Cooling Tube D.png" alt="Cooling Tube D" loading="lazy"><div class="lbl"><strong>Cooling Tube D</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Cooling Tube E.png" alt="Cooling Tube E" loading="lazy"><div class="lbl"><strong>Cooling Tube E</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Cooling Tube Bottom Mount.png" alt="Cooling Tube Bottom Mount" loading="lazy"><div class="lbl"><strong>Cooling Tube Bottom Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Cooling Tube Top Mount.png" alt="Cooling Tube Top Mount" loading="lazy"><div class="lbl"><strong>Cooling Tube Top Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Cooling Tube Small.png" alt="Cooling Tube Small" loading="lazy"><div class="lbl"><strong>Cooling Tube Small</strong><span class="badge print" style="font-size:0.68rem">3D Print &times;5</span></div></div>
+    </div>
+  </div>
+
+  <div class="group-block">
+    <div class="sh"><h2>&#x2600;&#xFE0F; Solar</h2><span class="badge print">6 parts</span></div>
+    <div class="grid">
+      <div class="card hero-card"><img src="../other/solar_assembly.png" alt="Solar assembled" loading="lazy"><div class="lbl"><strong>Solar &mdash; assembled</strong></div></div>
+      <div class="card"><img src="Solar Mounting Bracket.png" alt="Solar Mounting Bracket" loading="lazy"><div class="lbl"><strong>Solar Mounting Bracket</strong><span class="badge print" style="font-size:0.68rem">3D Print &times;2</span></div></div>
+      <div class="card"><img src="Solar Panel Frame.png" alt="Panel Frame" loading="lazy"><div class="lbl"><strong>Panel Frame</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Solar Array Front.png" alt="Solar Array Front" loading="lazy"><div class="lbl"><strong>Solar Array Front</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Solar Array Rail.png" alt="Solar Array Rail" loading="lazy"><div class="lbl"><strong>Solar Array Rail</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="Array.png" alt="Array" loading="lazy"><div class="lbl"><strong>Array</strong><span class="badge print" style="font-size:0.68rem">3D Print &times;4</span></div></div>
+      <div class="card"><img src="Back Array.png" alt="Back Array" loading="lazy"><div class="lbl"><strong>Back Array</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+    </div>
+  </div>
+
+  <div class="group-block">
+    <div class="sh"><h2>&#x1F527; Side Mounts</h2><span class="badge print">9 parts</span></div>
+    <div class="grid">
+      <div class="card hero-card"><img src="../other/side_mounts_assembly.png" alt="Side Mounts assembled" loading="lazy"><div class="lbl"><strong>Side Mounts &mdash; assembled</strong></div></div>
+      <div class="card"><img src="SM Top.png" alt="SM Top" loading="lazy"><div class="lbl"><strong>SM Top</strong><span class="badge print" style="font-size:0.68rem">3D Print &times;2</span></div></div>
+      <div class="card"><img src="SM R NASA.png" alt="SM R NASA" loading="lazy"><div class="lbl"><strong>SM R NASA</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="SM R Letter Plate.png" alt="SM R Letter Plate" loading="lazy"><div class="lbl"><strong>SM R Letter Plate</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="SM L L.png" alt="SM L L" loading="lazy"><div class="lbl"><strong>SM L L</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="SM Side Plate.png" alt="SM Side Plate" loading="lazy"><div class="lbl"><strong>SM Side Plate</strong><span class="badge print" style="font-size:0.68rem">3D Print &times;2</span></div></div>
+      <div class="card"><img src="SM Main Body.png" alt="SM Main Body" loading="lazy"><div class="lbl"><strong>SM Main Body</strong><span class="badge print" style="font-size:0.68rem">3D Print &times;2</span></div></div>
+      <div class="card"><img src="SM L Letter Plate.png" alt="SM L Letter Plate" loading="lazy"><div class="lbl"><strong>SM L Letter Plate</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="SM L J.png" alt="SM L J" loading="lazy"><div class="lbl"><strong>SM L J</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="SM L P.png" alt="SM L P" loading="lazy"><div class="lbl"><strong>SM L P</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+    </div>
+  </div>
+
+
+  <div class="group-block">
+    <div class="sh"><h2>&#x1FA9F; Box &amp; Window</h2><span class="badge print">5 parts</span></div>
+    <div class="grid">
+      <div class="card hero-card"><img src="../other/bw_assembly.png" alt="Box &amp; Window assembled" loading="lazy"><div class="lbl"><strong>Box &amp; Window &mdash; assembled</strong></div></div>
+      <div class="card"><img src="SBW Side Box Main.png" alt="SBW Side Box Main" loading="lazy"><div class="lbl"><strong>SBW Side Box Main</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="SBW Side Box Lid.png" alt="SBW Side Box Lid" loading="lazy"><div class="lbl"><strong>SBW Side Box Lid</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="SBW Window Frame.png" alt="SBW Window Frame" loading="lazy"><div class="lbl"><strong>SBW Window Frame</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="SBW Window Main.png" alt="SBW Window Main" loading="lazy"><div class="lbl"><strong>SBW Window Main</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="SBW Window Mount.png" alt="SBW Window Mount" loading="lazy"><div class="lbl"><strong>SBW Window Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+    </div>
+  </div>
+
+  <div class="group-block">
+    <div class="sh" id="mirror"><h2>&#x1F5FA;&#xFE0F; Mirror</h2><span class="badge print">9 parts</span></div>
+    <div class="grid">
+      <div class="card hero-card"><img src="../other/mirror_assembly.png" alt="Mirror assembled" loading="lazy"><div class="lbl"><strong>Mirror &mdash; assembled</strong></div></div>
+      <div class="card"><img src="M Bottom Base Rotation.png" alt="M Bottom Base Rotation" loading="lazy"><div class="lbl"><strong>M Bottom Base Rotation</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="M Servo Under Body Mount.png" alt="M Servo Under Body Mount" loading="lazy"><div class="lbl"><strong>M Servo Under Body Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="M Inner to Bottom of Base Rotation.png" alt="M Inner to Bottom of Base Rotation" loading="lazy"><div class="lbl"><strong>M Inner to Bottom of Base Rotation</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="M Mirror.png" alt="M Mirror" loading="lazy"><div class="lbl"><strong>M Mirror</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="M Arm Holder Mount.png" alt="M Arm Holder Mount" loading="lazy"><div class="lbl"><strong>M Arm Holder Mount</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="M Arm Back Connector.png" alt="M Arm Back Connector" loading="lazy"><div class="lbl"><strong>M Arm Back Connector</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="M Arm.png" alt="M Arm" loading="lazy"><div class="lbl"><strong>M Arm</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="M Frame.png" alt="M Frame" loading="lazy"><div class="lbl"><strong>M Frame</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+      <div class="card"><img src="M Arm Connection Tube.png" alt="M Arm Connection Tube" loading="lazy"><div class="lbl"><strong>M Arm Connection Tube</strong><span class="badge print" style="font-size:0.68rem">3D Print</span></div></div>
+    </div>
+  </div>
+
+
+  <!-- COMMON PRINTING OBJECTS -->
+  <div class="group-block">
+    <div class="sh"><h2>&#x1F501; Mirror &mdash; Common Printing Objects</h2><span class="badge print">2 types &times; 1 each</span></div>
+    <p style="color:#8b949e;font-size:0.85rem;margin-bottom:20px;line-height:1.6">
+      These parts are shared servo components required for the Mirror assembly.
+    </p>
+    <div class="grid">
+      <div class="card">
+        <img src="../other/Servo MG996R Casings.png" alt="Servo MG996R Casings" loading="lazy">
+        <div class="lbl"><strong>Servo MG996R Casings</strong><span class="badge print" style="font-size:0.68rem">3D Print &times;&thinsp;1</span></div>
+      </div>
+      <div class="card">
+        <img src="../other/Servo MG996R Door Panel.png" alt="Servo MG996R Door Panel" loading="lazy">
+        <div class="lbl"><strong>Servo MG996R Door Panel</strong><span class="badge print" style="font-size:0.68rem">3D Print &times;&thinsp;1</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MIRROR PARTS TO PURCHASE -->
+  <div class="group-block">
+    <div class="sh"><h2>&#x1F6D2; Mirror &mdash; Parts to Purchase</h2><span class="badge buy">Hardware</span></div>
+    <p style="color:#8b949e;font-size:0.85rem;margin-bottom:20px;line-height:1.6">
+      The following items must be purchased for the Mirror assembly.
+    </p>
+    <div class="grid" style="margin-bottom:48px">
+      <div class="card buy-card">
+        <img src="../other/MG996RorDS3218.jpg" alt="MG996R or DS3218 Servo" loading="lazy">
+        <div class="lbl"><strong>MG996R or DS3218 Servo</strong> <span style="color:#f0f6fc;font-weight:700">&times;1</span><span class="badge buy" style="font-size:0.68rem;margin-left:6px">Purchase</span><div class="note">MG996R or DS3218 Pro 20KG 180&deg; digital servo</div></div>
+      </div>
+      <div class="card buy-card">
+        <img src="../other/Servo Bolt.png" alt="Servo Bolt" loading="lazy">
+        <div class="lbl"><strong>Servo Bolt</strong> <span style="color:#f0f6fc;font-weight:700">&times;4</span><span class="badge buy" style="font-size:0.68rem;margin-left:6px">Purchase</span><div class="note">Standard servo mounting bolt</div></div>
+      </div>
+      <div class="card buy-card">
+        <img src="../other/Servo MG996R Horn.png" alt="Servo MG996R Horn" loading="lazy">
+        <div class="lbl"><strong>Servo MG996R Horn</strong> <span style="color:#f0f6fc;font-weight:700">&times;1</span><span class="badge buy" style="font-size:0.68rem;margin-left:6px">Purchase</span><div class="note">Standard MG996R servo horn</div></div>
+      </div>
+    </div>
+  </div>
+
+</main>
+<footer>
+  Rover Parts Catalog &mdash; Other Body Parts &mdash;
+  <a href="../index.html">Home</a> &bull;
+  <a href="../ws/ws.html">Wheel &amp; Suspension</a> &bull;
+  <a href="../body/body.html">Body</a> &bull;
+  <a href="../camera/camera.html">Camera</a> &bull;
+  <a href="../arm/arm.html">Arm</a>
+</footer>
+</body>
+</html>
